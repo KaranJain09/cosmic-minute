@@ -1,0 +1,218 @@
+{
+  "episode_number": 6,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 6: Saturn's Dying Rings",
+  "slug": "light-speed-stop-6-saturn",
+  "topic": "Light-speed journey stop 6: Saturn (~67 light-minutes at closest; rings about 280,000 km wide but mostly only ~10 m thick; mostly water ice; ring rain drains them; may vanish in ~100-300 million years; less dense than water; Titan and Enceladus)",
+  "links_to_previous": "Answers episode 5's cliffhanger (will Saturn's rings vanish?): yes, eventually. The journey continues from Jupiter to Saturn, then heads for Uranus and Neptune.",
+  "hook": "Saturn's rings are disappearing right now.",
+  "title_card": "RINGS ARE DYING",
+  "cliffhanger_question": "Does it rain diamonds on Uranus and Neptune? Yes or no?",
+  "summary": "Answer: yes, the rings will vanish. ~67 light-minutes at closest. Rings span ~280,000 km but are mostly only ~10 m thick, mostly water ice. Ring material rains into Saturn; scientists think they could be gone in 100-300 million years. Saturn is less dense than water. Next stop: Uranus and Neptune.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Saturn's rings are disappearing right now.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn Cassini rings backlit",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA14934"
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "The answer: yes. Scientists think they'll be gone in a few hundred million years.",
+      "on_screen_text": "THE ANSWER: *YES*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn rings Cassini",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "zoom_in"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "At its closest, light from Earth needs about sixty-seven minutes to get here.",
+      "on_screen_text": "*67* LIGHT-MINUTES",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn Cassini",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "The rings stretch about two hundred eighty thousand kilometers across.",
+      "on_screen_text": "*280,000* KM WIDE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn rings Cassini",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA14943"
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "Yet they're mostly just ten meters thick. Thinner than a house.",
+      "on_screen_text": "ONLY *10* METERS THICK",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn rings edge-on Cassini",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "They're made almost entirely of water ice, from dust grains to house-sized chunks.",
+      "on_screen_text": "*WATER ICE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn rings Cassini",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "PIA08869"
+      }
+    },
+    {
+      "id": 7,
+      "role": "reveal",
+      "narration": "Gravity is pulling them in. The ice falls into Saturn like rain.",
+      "on_screen_text": "RING *RAIN*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn ring rain Cassini",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "narration": "Saturn is so light, it would float in a giant bathtub.",
+      "on_screen_text": "*FLOATS* ON WATER",
+      "visual": {
+        "backend": "nasa",
+        "query": "Saturn Cassini",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA05983"
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "Its moon Enceladus shoots icy geysers into space.",
+      "on_screen_text": "ICY *GEYSERS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Enceladus plumes Cassini",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "twist",
+      "narration": "And Titan has lakes, but filled with liquid methane, not water.",
+      "on_screen_text": "LAKES OF *METHANE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Titan Cassini",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "Farther out, two ice giants hide something even stranger.",
+      "on_screen_text": "*STRANGER* STILL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Neptune Voyager 2",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA02210"
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, Uranus and Neptune. Does it rain diamonds there? Yes or no?",
+      "on_screen_text": "DIAMOND *RAIN*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Uranus Voyager 2",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Saturn's Rings Are Disappearing 🪐 #Shorts",
+    "instagram_caption": "Saturn's rings are disappearing right now. 🪐\n\nThey're mostly water ice, only about 10 meters thick, and they're slowly raining into the planet.\n\nPart 6 of the light-speed journey. Next stop: Uranus and Neptune.",
+    "description": "Light-speed journey, stop 6: Saturn. About 67 light-minutes from Earth at closest. Its rings span about 280,000 km but are mostly only around 10 meters thick, made mostly of water ice. Ring material is slowly falling into Saturn, and scientists think the rings could vanish in a few hundred million years.",
+    "pinned_comment": "Does it rain diamonds on Uranus and Neptune? YES or NO? 👇 Part 7 answers it.",
+    "hashtags": [
+      "#saturn",
+      "#space",
+      "#lightspeed",
+      "#rings",
+      "#solarsystem",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

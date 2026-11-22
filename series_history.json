@@ -72,6 +72,30 @@
       "created_at": "2026-11-22T00:00:00+00:00",
       "duration_sec": 50.67,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 6,
+      "title": "Light Speed Stop 6: Saturn's Dying Rings",
+      "topic": "Light-speed journey stop 6: Saturn (~67 light-minutes at closest; rings about 280,000 km wide but mostly only ~10 m thick; mostly water ice; ring rain drains them; may vanish in ~100-300 million years; less dense than water; Titan and Enceladus)",
+      "hook": "Saturn's rings are disappearing right now.",
+      "cliffhanger_question": "Does it rain diamonds on Uranus and Neptune? Yes or no?",
+      "summary": "Answer: yes, the rings will vanish. ~67 light-minutes at closest. Rings span ~280,000 km but are mostly only ~10 m thick, mostly water ice. Ring material rains into Saturn; scientists think they could be gone in 100-300 million years. Saturn is less dense than water. Next stop: Uranus and Neptune.",
+      "script_file": "scripts/episode_6.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-22T22:34:31.565074+00:00"
+    },
+    {
+      "episode_number": 7,
+      "title": "Light Speed Stop 7: Diamond Rain on Ice Giants?",
+      "topic": "Light-speed journey stop 7: Uranus and Neptune (Uranus ~2.4 light-hours at closest, Neptune ~4 light-hours; scientists think diamond rain deep inside; Uranus tilted ~98 degrees; Neptune winds ~2,000 km/h; only Voyager 2 visited, in 1986 and 1989)",
+      "hook": "Scientists think it rains diamonds out here.",
+      "cliffhanger_question": "Is a ninth planet hiding beyond Neptune? Yes or no?",
+      "summary": "Answer: probably yes, deep inside. Scientists think extreme pressure turns carbon into diamonds that sink. Uranus ~2.4 light-hours away, tipped ~98 degrees; Neptune ~4 light-hours, winds ~2,000 km/h. Only Voyager 2 ever visited. Next stop: beyond Neptune, a possible ninth planet.",
+      "script_file": "scripts/episode_7.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-22T22:34:31.565353+00:00"
     }
   ]
 }

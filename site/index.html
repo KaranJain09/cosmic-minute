@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cosmic Minute">
+<meta name="theme-color" content="#07060f">
+<title>Cosmic Minute</title>
+<style>
+:root{--bg:#07060f;--card:#141225;--line:#2b2745;--text:#f5f4fb;--muted:#a7a3bd;--accent:#ffd400;--cyan:#4fc3f7;--ok:#55d68a;--bad:#ff7b7b}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{width:100%;max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 20px) 16px calc(env(safe-area-inset-bottom) + 32px)}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+h1{margin:0;font-size:24px;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+#refresh{min-height:44px;padding:0 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);font:600 15px inherit}
+.status{color:var(--muted);margin:0 0 16px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin-bottom:18px}
+.top{display:flex;justify-content:space-between;gap:10px;color:var(--cyan);font-size:13px;font-weight:700}
+.state{color:var(--muted);font-weight:600}
+h2{font-size:19px;line-height:1.25;margin:5px 0 12px}
+video{display:block;width:100%;aspect-ratio:9/16;max-height:72vh;background:#000;border-radius:12px;object-fit:contain}
+.notice{padding:14px;border-radius:12px;background:#0d0b1b;color:var(--muted);font-size:14px}
+.primary{display:flex;align-items:center;justify-content:center;min-height:50px;margin:12px 0;border-radius:13px;background:var(--accent);color:#141000;font-weight:800;text-decoration:none}
+.group{margin-top:14px}
+.label{color:var(--muted);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.field{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding:9px 0}
+.field span{min-width:0;font-weight:600}
+.copy{flex:none;min-width:82px;min-height:44px;border:0;border-radius:11px;background:#2a2648;color:var(--text);font:700 15px inherit}
+.copy.done{background:var(--ok);color:#06220f}
+.posted{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.posted label{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;border:1px solid var(--line);border-radius:11px;font-size:14px;font-weight:700}
+.posted input{width:20px;height:20px;accent-color:var(--ok)}
+.error{color:var(--bad)}
+</style>
+</head>
+<body>
+<main>
+  <header><h1>Cosmic <span>Minute</span></h1><button id="refresh" type="button">Refresh</button></header>
+  <p class="status" id="status" role="status">Loading episodes…</p>
+  <div id="list"></div>
+</main>
+<script>
+const FIELDS = {
+  youtube: [["Title", "youtube_title"], ["Description", "youtube_description"]],
+  instagram: [["Caption", "instagram_caption"]],
+  comment: [["Pinned comment", "pinned_comment"], ["All hashtags", "hashtags"]]
+};
+const STATES = {ready: "Ready", archived: "Archived", scripted: "Rendering", failed: "Failed"};
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+const store = {
+  get(k) { try { return localStorage.getItem(k) === "1"; } catch { return false; } },
+  set(k, v) { try { localStorage.setItem(k, v ? "1" : "0"); } catch {} }
+};
+async function copyText(text) {
+  try { await navigator.clipboard.writeText(text); return true; } catch {}
+  const t = document.createElement("textarea");
+  t.value = text; t.readOnly = true; t.style.position = "fixed"; t.style.opacity = "0";
+  document.body.append(t); t.select(); t.setSelectionRange(0, text.length);
+  let ok = false; try { ok = document.execCommand("copy"); } catch {}
+  t.remove(); return ok;
+}
+function field(label, text) {
+  const row = el("div", "field"), b = el("button", "copy", "Copy");
+  b.type = "button"; b.setAttribute("aria-label", "Copy " + label);
+  b.onclick = async () => {
+    const ok = await copyText(text);
+    b.textContent = ok ? "Copied" : "Failed"; b.classList.toggle("done", ok);
+    setTimeout(() => { b.textContent = "Copy"; b.classList.remove("done"); }, 1500);
+  };
+  row.append(el("span", "", label), b); return row;
+}
+function group(title, items, text) {
+  const g = el("section", "group"); g.append(el("div", "label", title));
+  items.forEach(([label, key]) => g.append(field(label, text[key]))); return g;
+}
+function posted(n, name) {
+  const key = `posted-${n}-${name}`, l = el("label"), c = el("input");
+  c.type = "checkbox"; c.checked = store.get(key); c.onchange = () => store.set(key, c.checked);
+  l.append(c, document.createTextNode(name)); return l;
+}
+function card(e) {
+  const a = el("article", "card"), top = el("div", "top");
+  const secs = e.duration ? ` · ${Math.round(e.duration)}s` : "";
+  top.append(el("span", "", `EPISODE ${e.number}${secs}`), el("span", "state", STATES[e.state] || e.state));
+  a.append(top, el("h2", "", e.title));
+  if (e.video_url) {
+    const v = el("video"); v.controls = true; v.playsInline = true; v.preload = "metadata"; v.src = e.video_url;
+    if (e.poster_url) v.poster = e.poster_url;
+    const d = el("a", "primary", "Download video"); d.href = e.video_url; d.setAttribute("download", e.file);
+    a.append(v, d);
+  } else {
+    const msg = e.state === "archived" ? "Video moved to your laptop archive. The text below is still available."
+      : e.state === "failed" ? "This render failed. It will be repaired on the next nightly run."
+      : "This video is still being made. Refresh in a few minutes.";
+    a.append(el("div", "notice", msg));
+  }
+  a.append(group("YouTube", FIELDS.youtube, e.text), group("Instagram", FIELDS.instagram, e.text), group("Comment and tags", FIELDS.comment, e.text));
+  const p = el("div", "posted"); p.append(posted(e.number, "YouTube"), posted(e.number, "Instagram")); a.append(p);
+  return a;
+}
+async function load() {
+  const status = document.getElementById("status"), list = document.getElementById("list");
+  status.className = "status"; status.textContent = "Loading episodes…";
+  try {
+    const r = await fetch("episodes.json?t=" + Date.now(), {cache: "no-store"});
+    if (!r.ok) throw new Error(r.status);
+    const data = await r.json();
+    list.replaceChildren(...data.episodes.map(card));
+    const ready = data.episodes.filter(e => e.state === "ready").length;
+    status.textContent = `${ready} video${ready === 1 ? "" : "s"} ready to download`;
+  } catch {
+    status.className = "status error"; status.textContent = "Could not load episodes. Check your connection and tap Refresh.";
+  }
+}
+document.getElementById("refresh").onclick = load;
+load();
+</script>
+</body>
+</html>

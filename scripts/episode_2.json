@@ -1,0 +1,206 @@
+{
+  "episode_number": 2,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 2: Venus Is Hell",
+  "slug": "light-speed-stop-2-venus",
+  "topic": "Light-speed journey stop 2: Venus (closest at ~38 million km / ~2 light-minutes; 465°C; 92x pressure; spins backwards; day longer than year; Venera 13 survived 127 min)",
+  "links_to_previous": "Answers episode 1's cliffhanger (Venus, Mars or the Sun first?): Venus, at ~2 light-minutes when closest, vs Mars ~3 and the Sun 8 min 20 s. Then the journey stops at Venus.",
+  "hook": "Venus wins. But only when it lines up perfectly.",
+  "title_card": "VENUS WINS",
+  "cliffhanger_question": "Could humans ever live on Mars? Yes or no?",
+  "summary": "Answer: Venus is first when closest (~38 million km, ~2 light-minutes); Mars ~3 min, Sun 8 min 20 s. Venus: ~465°C (melts lead), pressure like 900 m underwater, spins backwards (Sun rises in the west), day longer than its year, Soviet Venera 13 lasted ~2 hours in 1982. Next stop: Mars.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Venus wins. But only when it lines up perfectly.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus Mariner 10",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "At its closest, Venus is thirty eight million kilometres away. Light gets there in about two minutes.",
+      "on_screen_text": "*2* MINUTES",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus globe Magellan",
+        "fit": "contain",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "Mars takes at least three. The Sun takes eight minutes and twenty seconds.",
+      "on_screen_text": "SUN: *8 MIN 20 SEC*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun Solar Dynamics Observatory",
+        "fit": "contain",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "twist",
+      "narration": "So you dive into Venus. Bad idea.",
+      "on_screen_text": "BAD *IDEA*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus clouds ultraviolet",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "reveal",
+      "narration": "The surface is around four hundred sixty five degrees Celsius. Hot enough to melt lead.",
+      "on_screen_text": "*465°C*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus surface Magellan radar",
+        "fit": "cover",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "The air is so thick, standing there feels like being nine hundred metres underwater.",
+      "on_screen_text": "*92x* EARTH'S PRESSURE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus atmosphere",
+        "fit": "cover",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "narration": "And it spins backwards, so the Sun rises in the west.",
+      "on_screen_text": "SUN RISES IN THE *WEST*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus transit Sun",
+        "fit": "contain",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "reveal",
+      "narration": "One day on Venus lasts longer than its entire year.",
+      "on_screen_text": "1 DAY > *1 YEAR*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus full globe",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "In 1982, a Soviet lander touched down and survived just over two hours.",
+      "on_screen_text": "*127* MINUTES",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus surface lander",
+        "fit": "cover",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "twist",
+      "narration": "Then the heat and pressure crushed it.",
+      "on_screen_text": "*CRUSHED*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus volcano Maat Mons",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "So you leave. Next stop: the red planet.",
+      "on_screen_text": "NEXT STOP: *MARS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars Hubble",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Could humans ever live on Mars? Yes or no? Tell me below.",
+      "on_screen_text": "LIVE ON MARS? *YES* OR *NO*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars globe Viking",
+        "fit": "contain",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Venus Beats Mars and the Sun… But It's Hell 🔥 #Shorts",
+    "instagram_caption": "At light speed, Venus is your first stop: just 2 minutes away when it's closest. 🪐\n\nBut the surface is 465°C, the air crushes like 900 m of ocean, and the Sun rises in the west. 🔥\n\nPart 2 of the light-speed journey. Next stop: Mars.",
+    "description": "Light-speed journey, stop 2: Venus. At its closest, Venus is about 38 million km away, roughly 2 light-minutes. Mars is at least 3, the Sun 8 min 20 s. Venus is about 465°C, its air pressure is 92 times Earth's, it spins backwards, and one day is longer than its year. The Soviet Venera 13 lander survived just over two hours in 1982.",
+    "pinned_comment": "Could humans ever live on Mars? YES or NO? 👇 Part 3 answers it.",
+    "hashtags": [
+      "#venus",
+      "#space",
+      "#lightspeed",
+      "#planets",
+      "#solarsystem",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

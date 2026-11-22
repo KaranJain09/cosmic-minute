@@ -1,0 +1,206 @@
+{
+  "episode_number": 3,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 3: Could We Live on Mars?",
+  "slug": "light-speed-stop-3-mars",
+  "topic": "Light-speed journey stop 3: Mars (~3 light-minutes when closest; air <1% of Earth's; ~-60°C; Olympus Mons ~2.5x Everest; blue sunsets; planet-wide dust storms; Phobos spiralling inward)",
+  "links_to_previous": "Answers episode 2's cliffhanger (could humans live on Mars?): not without sealed habitats. The journey continues from Venus to Mars, then heads for the asteroid belt.",
+  "hook": "Without a suit, Mars knocks you out in seconds.",
+  "title_card": "MARS SAYS NO",
+  "cliffhanger_question": "Is the asteroid belt packed with rocks like in the movies? Yes or no?",
+  "summary": "Answer: not without sealed, shielded habitats. Mars: ~3 light-minutes when closest, air under 1% of Earth's, ~-60°C average, Olympus Mons ~2.5x Everest, blue sunsets, planet-wide dust storms, Phobos spiralling inward (crash or ring in tens of millions of years). Next stop: the asteroid belt.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Without a suit, Mars knocks you out in seconds.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars Curiosity selfie",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "Light reaches Mars in about three minutes when it's closest.",
+      "on_screen_text": "*3* MINUTES",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars Hubble",
+        "fit": "contain",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "The air there is less than one percent as thick as the air on Earth.",
+      "on_screen_text": "AIR: *UNDER 1%* OF EARTH'S",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars atmosphere limb",
+        "fit": "cover",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "And the average temperature is about minus sixty degrees Celsius.",
+      "on_screen_text": "*-60°C* AVERAGE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars north polar ice cap",
+        "fit": "contain",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "reveal",
+      "narration": "But Mars has the tallest volcano in the solar system, Olympus Mons.",
+      "on_screen_text": "OLYMPUS *MONS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Olympus Mons",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "It's about two and a half times taller than Mount Everest.",
+      "on_screen_text": "*2.5x* EVEREST",
+      "visual": {
+        "backend": "nasa",
+        "query": "Olympus Mons Viking mosaic",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "narration": "And here's the weird part: on Mars, sunsets are blue.",
+      "on_screen_text": "BLUE *SUNSETS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars sunset Gale crater Curiosity",
+        "fit": "cover",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "narration": "Dust storms there can swallow the entire planet for weeks.",
+      "on_screen_text": "PLANET-WIDE *STORMS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars global dust storm",
+        "fit": "contain",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "twist",
+      "narration": "Even its moon Phobos is slowly spiralling inward, closer every year.",
+      "on_screen_text": "PHOBOS IS *FALLING*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Phobos HiRISE",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "narration": "In tens of millions of years, it will crash or shatter into a ring.",
+      "on_screen_text": "A RING AROUND *MARS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Phobos Mars",
+        "fit": "contain",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "So could we live here? Only inside sealed, shielded habitats. For now.",
+      "on_screen_text": "ONLY IN *HABITATS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars habitat concept",
+        "fit": "cover",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next is the asteroid belt. Is it packed like in the movies? Yes or no?",
+      "on_screen_text": "PACKED LIKE THE *MOVIES*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid Vesta Dawn",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Could You Live on Mars? Mars Says No 🔴 #Shorts",
+    "instagram_caption": "Light reaches Mars in about 3 minutes. You'd last seconds without a suit. 🔴\n\nAir under 1% of Earth's, -60°C, a volcano 2.5x taller than Everest, and blue sunsets. 🌅\n\nPart 3 of the light-speed journey. Next stop: the asteroid belt.",
+    "description": "Light-speed journey, stop 3: Mars. About 3 light-minutes away at its closest. The air is under 1% as thick as Earth's, the average temperature is about -60°C, Olympus Mons is roughly 2.5 times taller than Everest, sunsets are blue, dust storms can cover the whole planet, and the moon Phobos is spiralling inward.",
+    "pinned_comment": "Is the asteroid belt packed with rocks like in the movies? YES or NO? 👇 Part 4 answers it.",
+    "hashtags": [
+      "#mars",
+      "#space",
+      "#lightspeed",
+      "#olympusmons",
+      "#solarsystem",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

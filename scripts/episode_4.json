@@ -1,0 +1,168 @@
+{
+  "episode_number": 4,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 4: The Asteroid Belt Lie",
+  "slug": "light-speed-stop-4-asteroid-belt",
+  "topic": "Light-speed journey stop 4: the asteroid belt (~10 light-minutes to inner edge at closest; asteroids ~1 million km apart on average; total mass ~3% of the Moon; Ceres ~1/3 of that; salt deposits in Occator crater; Jupiter's gravity prevented a planet)",
+  "links_to_previous": "Answers episode 3's cliffhanger (is the asteroid belt packed like in the movies?): no, it is almost entirely empty. The journey continues from Mars to the belt, then heads for Jupiter.",
+  "hook": "The movies lied to you about asteroid belts.",
+  "title_card": "THE BELT IS EMPTY",
+  "cliffhanger_question": "Is Jupiter Earth's protector or its biggest threat?",
+  "summary": "Answer: no, the belt is almost empty. ~10 light-minutes from Earth to its inner edge at closest, asteroids ~1 million km apart on average, every spacecraft crossed safely. Total mass ~3% of the Moon, about a third of it in dwarf planet Ceres (bright salt deposits). Scientists think Jupiter's gravity stopped a planet forming. Next stop: Jupiter.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "The movies lied to you about asteroid belts.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid belt illustration",
+        "nasa_id": "PIA24472",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": { "motion": "pop" }
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "The answer is no. The belt is almost completely empty.",
+      "on_screen_text": "ALMOST *EMPTY*",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid belt illustration",
+        "nasa_id": "ACD17-0168-009",
+        "fit": "cover",
+        "style": { "motion": "zoom_in" }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "Light from Earth reaches its inner edge in about ten minutes.",
+      "on_screen_text": "*10* LIGHT-MINUTES",
+      "visual": {
+        "backend": "nasa",
+        "query": "Earth from space Blue Marble",
+        "fit": "contain",
+        "style": { "motion": "count" }
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "Asteroids there sit about a million kilometers apart, on average.",
+      "on_screen_text": "*1,000,000* KM APART",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid Vesta Dawn",
+        "nasa_id": "PIA14125",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": { "motion": "count" }
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "Stand on one, and you probably couldn't even see the next. Just stars and blackness.",
+      "on_screen_text": "NOTHING IN *SIGHT*",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid Eros NEAR Shoemaker surface",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": { "motion": "slide_up" }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "Every spacecraft that crossed it made it through without a collision. No dodging required.",
+      "on_screen_text": "*ZERO* CRASHES",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid Vesta Dawn",
+        "nasa_id": "PIA15174",
+        "fit": "cover",
+        "style": { "motion": "shake" }
+      }
+    },
+    {
+      "id": 7,
+      "role": "reveal",
+      "narration": "Put all its rocks together, and you get about three percent of our Moon.",
+      "on_screen_text": "*3%* OF THE MOON",
+      "visual": {
+        "backend": "nasa",
+        "query": "Moon near side Lunar Reconnaissance Orbiter",
+        "nasa_id": "GSFC_20171208_Archive_e001861",
+        "fit": "contain",
+        "style": { "motion": "count" }
+      }
+    },
+    {
+      "id": 8,
+      "role": "twist",
+      "narration": "And about a third of that is one world, Ceres.",
+      "on_screen_text": "MEET *CERES*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Occator crater bright spots Ceres",
+        "nasa_id": "PIA19619",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": { "motion": "pop" }
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "A dwarf planet nearly a thousand kilometers wide, with bright salt in a crater.",
+      "on_screen_text": "BRIGHT *SALT*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Occator crater bright spots Ceres",
+        "nasa_id": "PIA19889",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": { "motion": "words" }
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "narration": "So why did this never become a planet? Scientists think Jupiter's gravity stopped it.",
+      "on_screen_text": "BLAME *JUPITER*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Jupiter Hubble",
+        "fit": "contain",
+        "style": { "motion": "zoom_out" }
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "narration": "Next stop, Jupiter. Is it Earth's protector or its biggest threat? Pick one.",
+      "on_screen_text": "PROTECTOR OR *THREAT*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Jupiter Great Red Spot Juno",
+        "nasa_id": "PIA21772",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": { "motion": "pop" }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "The Asteroid Belt Is Almost Empty ☄️ #Shorts",
+    "instagram_caption": "The movies lied. The asteroid belt is almost completely empty. ☄️\n\nAsteroids sit about a million km apart, and all of them together weigh about 3% of our Moon.\n\nPart 4 of the light-speed journey. Next stop: Jupiter.",
+    "description": "Light-speed journey, stop 4: the asteroid belt. Its inner edge is about 10 light-minutes from Earth at closest. Asteroids average roughly a million kilometers apart, and spacecraft cross safely. The whole belt holds about 3% of the Moon's mass, around a third of it in the dwarf planet Ceres, known for bright salt deposits. Scientists think Jupiter's gravity kept a planet from forming here.",
+    "pinned_comment": "Is Jupiter Earth's PROTECTOR or its biggest THREAT? 👇 Part 5 answers it.",
+    "hashtags": ["#asteroidbelt", "#asteroids", "#ceres", "#space", "#lightspeed", "#solarsystem", "#astronomy", "#spacefacts", "#science", "#shorts"]
+  }
+}

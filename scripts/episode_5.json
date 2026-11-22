@@ -1,0 +1,106 @@
+{
+  "episode_number": 5,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 5: Jupiter, Hero or Threat?",
+  "slug": "light-speed-stop-5-jupiter",
+  "topic": "Light-speed journey stop 5: Jupiter (~35 light-minutes at closest; ~1,300 Earths fit inside; over twice the mass of all other planets combined; deflects and redirects comets; Shoemaker-Levy 9 in 1994; Great Red Spot wider than Earth; day under 10 hours)",
+  "links_to_previous": "Answers episode 4's cliffhanger (is Jupiter Earth's protector or biggest threat?): both. The journey continues from the asteroid belt to Jupiter, then heads for Saturn.",
+  "hook": "Jupiter is your bodyguard and your biggest threat.",
+  "title_card": "HERO OR THREAT?",
+  "cliffhanger_question": "Will Saturn's rings vanish one day? Yes or no?",
+  "summary": "Answer: both. Jupiter throws some comets away and flings others toward us. ~35 light-minutes at closest, ~1,300 Earths fit inside, more than twice the mass of all other planets combined. Comet Shoemaker-Levy 9 hit it in 1994, leaving scars bigger than Earth. Great Red Spot is wider than Earth; a day lasts under 10 hours. Next stop: Saturn.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Jupiter is your bodyguard and your biggest threat.",
+      "on_screen_text": null,
+      "visual": { "backend": "nasa", "query": "Jupiter Cassini true color", "fit": "contain", "camera": "zoom_in", "style": { "motion": "pop" } }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "The answer: both. It throws some comets away, and flings others toward us.",
+      "on_screen_text": "THE ANSWER: *BOTH*",
+      "visual": { "backend": "nasa", "query": "comet Hale-Bopp", "nasa_id": "sts083-410-009", "fit": "cover", "style": { "motion": "zoom_in" } }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "At its closest, light from Earth takes about thirty-five minutes to arrive.",
+      "on_screen_text": "*35* LIGHT-MINUTES",
+      "visual": { "backend": "nasa", "query": "Jupiter Voyager", "nasa_id": "PIA00029", "fit": "contain", "style": { "motion": "count" } }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "Jupiter is so big that about thirteen hundred Earths could fit inside.",
+      "on_screen_text": "*1,300* EARTHS",
+      "visual": { "backend": "nasa", "query": "Great Red Spot Voyager", "nasa_id": "PIA01509", "fit": "contain", "camera": "zoom_out", "style": { "motion": "count" } }
+    },
+    {
+      "id": 5,
+      "role": "reveal",
+      "narration": "It outweighs all the other planets combined, more than twice over.",
+      "on_screen_text": "*2x* ALL OTHER PLANETS",
+      "visual": { "backend": "nasa", "query": "Jupiter Juno south pole", "fit": "contain", "style": { "motion": "count" } }
+    },
+    {
+      "id": 6,
+      "role": "twist",
+      "narration": "In nineteen ninety-four, the whole world watched it take a hit for real.",
+      "on_screen_text": "*1994*",
+      "visual": { "backend": "nasa", "query": "Shoemaker-Levy 9 Hubble comet train", "fit": "cover", "camera": "pan_left", "style": { "motion": "slide_up" } }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "Comet Shoemaker-Levy nine broke into pieces and slammed into Jupiter's clouds for days.",
+      "on_screen_text": "COMET *IMPACT*",
+      "visual": { "backend": "nasa", "query": "Shoemaker-Levy 9 impact Jupiter", "nasa_id": "ARC-1994-AC94-0182", "fit": "cover", "style": { "motion": "shake" } }
+    },
+    {
+      "id": 8,
+      "role": "reveal",
+      "narration": "Some of the impact scars were bigger than our entire planet.",
+      "on_screen_text": "SCARS BIGGER THAN *EARTH*",
+      "visual": { "backend": "nasa", "query": "Shoemaker-Levy 9 impact Jupiter", "nasa_id": "PIA01265", "fit": "contain", "camera": "zoom_in", "style": { "motion": "words" } }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "Its Great Red Spot is a single storm wider than the whole Earth.",
+      "on_screen_text": "ONE *GIANT* STORM",
+      "visual": { "backend": "nasa", "query": "Great Red Spot Voyager", "fit": "cover", "camera": "zoom_in", "style": { "motion": "pop" } }
+    },
+    {
+      "id": 10,
+      "role": "twist",
+      "narration": "And despite that size, one full day here lasts under ten hours.",
+      "on_screen_text": "DAY: *UNDER 10* HOURS",
+      "visual": { "backend": "nasa", "query": "Jupiter clouds Juno", "fit": "cover", "camera": "pan_right", "style": { "motion": "zoom_out" } }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "But the next planet hides something stranger, and it's slowly disappearing.",
+      "on_screen_text": "SLOWLY *DISAPPEARING*",
+      "visual": { "backend": "nasa", "query": "Saturn Cassini", "nasa_id": "PIA05983", "fit": "contain", "style": { "motion": "slide_up" } }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, Saturn. Will its rings vanish one day? Yes or no?",
+      "on_screen_text": "WILL THE RINGS *VANISH*?",
+      "visual": { "backend": "nasa", "query": "Saturn rings Cassini", "fit": "cover", "camera": "zoom_in", "style": { "motion": "pop" } }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Jupiter: Earth's Bodyguard or Biggest Threat? 🪐 #Shorts",
+    "instagram_caption": "Jupiter is your bodyguard AND your biggest threat. 🪐\n\nIt throws some comets away and flings others toward us. In 1994, a comet hit it and left scars bigger than Earth.\n\nPart 5 of the light-speed journey. Next stop: Saturn.",
+    "description": "Light-speed journey, stop 5: Jupiter. About 35 light-minutes from Earth at closest. Around 1,300 Earths could fit inside, and it has more than twice the mass of all the other planets combined. Its gravity deflects some comets and redirects others toward the inner solar system. In 1994, Comet Shoemaker-Levy 9 struck it, leaving scars larger than Earth.",
+    "pinned_comment": "Will Saturn's rings vanish one day? YES or NO? 👇 Part 6 answers it.",
+    "hashtags": ["#jupiter", "#space", "#lightspeed", "#greatredspot", "#solarsystem", "#astronomy", "#spacefacts", "#science", "#nasa", "#shorts"]
+  }
+}

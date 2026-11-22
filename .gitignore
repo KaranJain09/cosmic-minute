@@ -1,0 +1,14 @@
+build/
+.venv/
+__pycache__/
+.env
+.env.*
+!.env.example
+upload videos/*.mp4
+voice_samples/
+Video Archive/
+_site/
+*.tmp
+.claude/launch.json
+branding/
+profile_*.png

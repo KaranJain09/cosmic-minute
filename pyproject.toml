@@ -1,0 +1,23 @@
+[project]
+name = "shorts-pipeline"
+version = "0.2.0"
+description = "Deterministic renderer for 9:16 short-form series episodes (YouTube Shorts / Instagram Reels)"
+# Kokoro (free realistic voice) supports Python 3.10-3.12; uv installs 3.12 automatically (.python-version)
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "edge-tts>=6.1.12",
+    "pillow>=10.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "imageio-ffmpeg>=0.4.9",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+    # free local neural voice
+    "kokoro>=0.9.4",
+    "soundfile>=0.12",
+    "pip",  # spaCy/misaki may try to pip-install a language model at runtime
+    "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+]
+
+[tool.uv]
+package = false

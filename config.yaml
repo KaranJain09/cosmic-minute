@@ -1,0 +1,84 @@
+# Channel + pipeline settings. Episode JSON fields override these per episode.
+
+channel:
+  niche: "Space & science"
+  series_title: "Cosmic Minute"
+  youtube_handle: "@realcosmicminute"
+  instagram_handle: "@real_cosmic_min"
+  default_hashtags: ["#space", "#science", "#universe", "#astronomy", "#facts", "#shorts"]
+
+paths:
+  output_dir: "upload videos"
+  scripts_dir: "scripts"
+  build_dir: "build"
+  history: "series_history.json"
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  crf: 20
+  preset: "veryfast"
+  audio_bitrate: "192k"
+
+tts:
+  engine: "edge"                  # kokoro (free local) | edge (free online) | elevenlabs | dummy (offline test beeps)
+  kokoro:                         # run voice_samples.py to hear the options
+    voice: "am_michael"           # US: am_michael am_fenrir am_puck af_heart af_bella | UK: bm_george bm_fable bf_emma
+    speed: 1.05
+  edge:
+    voice: "en-US-AvaMultilingualNeural"   # chosen by user; alt: en-US-AndrewMultilingualNeural, en-IN-PrabhatNeural
+    rate: "+5%"
+    pitch: "+0Hz"
+    volume: "+0%"
+  elevenlabs:                     # needs ELEVENLABS_API_KEY in .env
+    voice_id: "pNInz6obpgDQGcFmaJgB"
+    model_id: "eleven_multilingual_v2"
+    stability: 0.45
+    similarity_boost: 0.8
+    style: 0.3
+
+visuals:
+  default_backend: "nasa"         # nasa (real NASA photos, no key) | stock (Pexels video) | kenburns (own image) | kinetic
+  palette:
+    bg_top: "#04030C"
+    bg_bottom: "#140B3A"
+    nebula: ["#3B1E8C", "#0E4D7A", "#7A1E5C", "#1E3A8C"]
+    accent: "#FFD400"
+    accent2: "#4FC3F7"
+    text: "#FFFFFF"
+  on_screen_text_y: 0.34          # fraction of height (center of text block)
+  stock:
+    provider: "pexels"            # needs PEXELS_API_KEY in .env, falls back to kinetic
+
+fonts:
+  display: { file: "assets/fonts/Anton-Regular.ttf" }
+  caption: { file: "assets/fonts/Montserrat-Variable.ttf", variation: "ExtraBold" }
+  ui:      { file: "assets/fonts/Montserrat-Variable.ttf", variation: "Bold" }
+
+captions:
+  size: 76
+  max_words: 3
+  max_chars: 20
+  y: 0.62                         # fraction of height (center of caption)
+  uppercase: true
+  color: "#FFFFFF"
+  highlight: "#FFD400"
+  stroke: 6
+  box_opacity: 0.55
+
+audio:
+  sample_rate: 48000
+  pad_after_default: 0.15         # silence after each scene's line (s)
+  music_dir: "assets/music"       # drop royalty-free .mp3/.wav here
+  music_under_speech_db: -20      # music level relative to voice while speaking
+  music_gaps_db: -14              # music level relative to voice in pauses
+  fallback_music: "ambient"       # ambient (generated drone) | none
+  whoosh: true                    # soft whoosh on each scene cut
+  whoosh_db: -24
+  loudness_lufs: -14
+
+overlay:
+  badge: true                     # "UNIVERSE FILES · EP 3" at top
+  cta_text: "COMMENT YOUR ANSWER"
+  follow_text: "FOLLOW FOR PART {next}"

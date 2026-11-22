@@ -1,0 +1,77 @@
+{
+  "series_title": "Cosmic Minute",
+  "niche": "Space & science",
+  "arc": "A light-speed journey outward from Earth to the edge of the observable universe, one stop per episode. Each episode answers the previous cliffhanger, then teases the next stop.",
+  "episodes": [
+    {
+      "episode_number": 1,
+      "title": "Leaving Earth at Light Speed: Stop 1",
+      "topic": "A light-speed journey outward from Earth, stop 1: the Moon (1.3 s away, drifting 3.8 cm/yr, laser mirrors, end of total eclipses)",
+      "hook": "You just left Earth at the speed of light.",
+      "cliffhanger_question": "After the Moon, what do you hit first: Venus, Mars, or the Sun?",
+      "summary": "Premiere of the light-speed journey. Light circles Earth 7.5 times a second and reaches the Moon in 1.3 s; Apollo took 3 days. The Moon recedes 3.8 cm a year (measured with Apollo laser mirrors), so total solar eclipses end in ~600 million years.",
+      "script_file": "scripts/episode_1.json",
+      "output_file": "upload videos/ep_001_light-speed-stop-1-the-moon.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-20T06:50:00+00:00",
+      "duration_sec": 44.2,
+      "voice_engine": "edge"
+    },
+    {
+      "episode_number": 2,
+      "title": "Light Speed Stop 2: Venus Is Hell",
+      "topic": "Light-speed journey stop 2: Venus (closest at ~38 million km / ~2 light-minutes; 465°C; 92x pressure; spins backwards; day longer than year; Venera 13 survived 127 min)",
+      "hook": "Venus wins. But only when it lines up perfectly.",
+      "cliffhanger_question": "Could humans ever live on Mars? Yes or no?",
+      "summary": "Answer: Venus is first when closest (~38 million km, ~2 light-minutes); Mars ~3 min, Sun 8 min 20 s. Venus: ~465°C (melts lead), pressure like 900 m underwater, spins backwards (Sun rises in the west), day longer than its year, Soviet Venera 13 lasted ~2 hours in 1982. Next stop: Mars.",
+      "script_file": "scripts/episode_2.json",
+      "output_file": "upload videos/ep_002_light-speed-stop-2-venus.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-20T15:14:41+00:00",
+      "duration_sec": 50.83,
+      "voice_engine": "edge"
+    },
+    {
+      "episode_number": 3,
+      "title": "Light Speed Stop 3: Could We Live on Mars?",
+      "topic": "Light-speed journey stop 3: Mars (~3 light-minutes when closest; air <1% of Earth's; ~-60°C; Olympus Mons ~2.5x Everest; blue sunsets; planet-wide dust storms; Phobos spiralling inward)",
+      "hook": "Without a suit, Mars knocks you out in seconds.",
+      "cliffhanger_question": "Is the asteroid belt packed with rocks like in the movies? Yes or no?",
+      "summary": "Answer: not without sealed, shielded habitats. Mars: ~3 light-minutes when closest, air under 1% of Earth's, ~-60°C average, Olympus Mons ~2.5x Everest, blue sunsets, planet-wide dust storms, Phobos spiralling inward (crash or ring in tens of millions of years). Next stop: the asteroid belt.",
+      "script_file": "scripts/episode_3.json",
+      "output_file": "upload videos/ep_003_light-speed-stop-3-mars.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-20T15:14:41+00:00",
+      "duration_sec": 48.47,
+      "voice_engine": "edge"
+    },
+    {
+      "episode_number": 4,
+      "title": "Light Speed Stop 4: The Asteroid Belt Lie",
+      "topic": "Light-speed journey stop 4: the asteroid belt (~10 light-minutes to inner edge at closest; asteroids ~1 million km apart on average; total mass ~3% of the Moon; Ceres ~1/3 of that; salt deposits in Occator crater; Jupiter's gravity prevented a planet)",
+      "hook": "The movies lied to you about asteroid belts.",
+      "cliffhanger_question": "Is Jupiter Earth's protector or its biggest threat?",
+      "summary": "Answer: no, the belt is almost empty. ~10 light-minutes from Earth to its inner edge at closest, asteroids ~1 million km apart on average, every spacecraft crossed safely. Total mass ~3% of the Moon, about a third of it in dwarf planet Ceres (bright salt deposits). Scientists think Jupiter's gravity stopped a planet forming. Next stop: Jupiter.",
+      "script_file": "scripts/episode_4.json",
+      "output_file": "upload videos/ep_004_light-speed-stop-4-asteroid-belt.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-22T00:00:00+00:00",
+      "duration_sec": 46.13,
+      "voice_engine": "edge"
+    },
+    {
+      "episode_number": 5,
+      "title": "Light Speed Stop 5: Jupiter, Hero or Threat?",
+      "topic": "Light-speed journey stop 5: Jupiter (~35 light-minutes at closest; ~1,300 Earths fit inside; over twice the mass of all other planets combined; deflects and redirects comets; Shoemaker-Levy 9 in 1994; Great Red Spot wider than Earth; day under 10 hours)",
+      "hook": "Jupiter is your bodyguard and your biggest threat.",
+      "cliffhanger_question": "Will Saturn's rings vanish one day? Yes or no?",
+      "summary": "Answer: both. Jupiter throws some comets away and flings others toward us. ~35 light-minutes at closest, ~1,300 Earths fit inside, more than twice the mass of all other planets combined. Comet Shoemaker-Levy 9 hit it in 1994, leaving scars bigger than Earth. Great Red Spot is wider than Earth; a day lasts under 10 hours. Next stop: Saturn.",
+      "script_file": "scripts/episode_5.json",
+      "output_file": "upload videos/ep_005_light-speed-stop-5-jupiter.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-22T00:00:00+00:00",
+      "duration_sec": 50.67,
+      "voice_engine": "edge"
+    }
+  ]
+}

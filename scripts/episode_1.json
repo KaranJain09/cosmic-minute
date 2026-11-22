@@ -1,0 +1,209 @@
+{
+  "episode_number": 1,
+  "series_title": "Universe Files",
+  "title": "Leaving Earth at Light Speed: Stop 1",
+  "slug": "light-speed-stop-1-the-moon",
+  "topic": "A light-speed journey outward from Earth, stop 1: the Moon (1.3 s away, drifting 3.8 cm/yr, laser mirrors, end of total eclipses)",
+  "links_to_previous": "series premiere: starts the light-speed journey from Earth to the edge of the observable universe, one stop per episode",
+  "hook": "You just left Earth at the speed of light.",
+  "title_card": "LIGHT SPEED: GO",
+  "cliffhanger_question": "After the Moon, what do you hit first: Venus, Mars, or the Sun?",
+  "summary": "Premiere of the light-speed journey. Light circles Earth 7.5 times a second and reaches the Moon in 1.3 s; Apollo took 3 days. The Moon recedes 3.8 cm a year (measured with Apollo laser mirrors), so total solar eclipses end in ~600 million years.",
+  "voice": {},
+  "music": {
+    "file": null,
+    "volume_db": -20
+  },
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "You just left Earth at the speed of light.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Blue Marble Earth",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "prompt": "Earth shrinking behind as camera rockets away, starfield streaks",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "narration": "In just one second, you could circle the whole Earth seven and a half times.",
+      "on_screen_text": "*7.5* LAPS EVERY SECOND",
+      "visual": {
+        "backend": "nasa",
+        "query": "Earth limb sunrise International Space Station",
+        "fit": "cover",
+        "prompt": "orbit lines wrapping a blue planet",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "But you're not circling. You're flying straight out, into the black.",
+      "on_screen_text": "STRAIGHT OUT",
+      "visual": {
+        "backend": "nasa",
+        "query": "Hubble deep field galaxies",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "prompt": "deep black space, distant stars",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "reveal",
+      "narration": "One point three seconds later, you pass the Moon.",
+      "on_screen_text": "*1.3* SECONDS",
+      "visual": {
+        "backend": "nasa",
+        "query": "full moon",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "prompt": "grey cratered Moon sliding past",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "narration": "Apollo astronauts needed three full days to cover that same distance.",
+      "on_screen_text": "APOLLO: *3 DAYS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Apollo 11 Saturn V launch",
+        "fit": "cover",
+        "camera": "pan_up",
+        "prompt": "Moon with small spacecraft path",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "twist",
+      "narration": "And the Moon is quietly running away from us.",
+      "on_screen_text": "IT'S *LEAVING*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Earthrise Apollo 8",
+        "fit": "auto",
+        "prompt": "Moon drifting away from Earth",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "reveal",
+      "narration": "It drifts about 3.8 centimetres farther away every single year.",
+      "on_screen_text": "*3.8 CM* EVERY YEAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "lunar surface craters Lunar Reconnaissance Orbiter",
+        "fit": "cover",
+        "prompt": "ruler between Earth and Moon",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "narration": "Astronauts left mirrors on its surface, and scientists still fire lasers at them to measure it.",
+      "on_screen_text": "LASERS + *MIRRORS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Apollo 11 laser ranging retroreflector",
+        "fit": "auto",
+        "prompt": "laser beam from Earth hitting the Moon",
+        "style": {
+          "motion": "zoom_in"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "twist",
+      "narration": "In about 600 million years, total solar eclipses will stop forever.",
+      "on_screen_text": "NO MORE *ECLIPSES*",
+      "visual": {
+        "backend": "nasa",
+        "query": "total solar eclipse corona",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "prompt": "Sun partially covered, glowing",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "narration": "But you're not stopping here. Your next stop arrives in just minutes.",
+      "on_screen_text": "NEXT STOP IN *MINUTES*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun Solar Dynamics Observatory",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "prompt": "dark space ahead, faint planets",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "narration": "So what do you hit first: Venus, Mars, or the Sun? Comment now.",
+      "on_screen_text": "VENUS, MARS OR *SUN*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus globe Magellan",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "prompt": "three bodies side by side",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "You Left Earth at Light Speed. Stop 1: The Moon 🌙 #Shorts",
+    "instagram_caption": "You leave Earth at the speed of light. 1.3 seconds later you pass the Moon, the same trip took Apollo 3 days. And the Moon is slowly running away from us. 🌙🚀\n\nStop 1 of a journey to the edge of the universe.",
+    "description": "Light-speed journey, stop 1: the Moon. Light circles Earth 7.5 times a second and reaches the Moon in 1.3 seconds. The Moon drifts 3.8 cm farther every year, and we measure it by firing lasers at mirrors Apollo astronauts left behind. Next stop: Venus, Mars or the Sun?",
+    "pinned_comment": "Be honest: Venus, Mars or the Sun, which do you hit FIRST at light speed? Answer drops in Part 2 👇",
+    "hashtags": [
+      "#space",
+      "#lightspeed",
+      "#moon",
+      "#science",
+      "#universe",
+      "#astronomy",
+      "#spacefacts",
+      "#nasa",
+      "#apollo",
+      "#shorts"
+    ]
+  }
+}

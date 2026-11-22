@@ -29,6 +29,8 @@ from pipeline.metadata import upload_fields  # noqa: E402
 
 HISTORY = ROOT / "series_history.json"
 ARCHIVE = ROOT / "Video Archive"
+PREVIEW = "preview.m4v"
+MAX_PREVIEW_BYTES = 800_000_000
 
 
 def gh(*args: str, check: bool = True) -> subprocess.CompletedProcess:
@@ -56,6 +58,48 @@ def releases() -> dict[str, dict]:
 def make_poster(video: Path, out: Path) -> None:
     subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-ss", "1", "-i", str(video), "-frames:v", "1",
                     "-vf", "scale=540:-2", "-q:v", "4", str(out)], check=True)
+
+
+def make_preview(video: Path, out: Path) -> None:
+    """Small H.264 copy for in-page playback. Named .m4v so the archive only treats full videos as .mp4."""
+    subprocess.run([ffmpeg_exe(), "-v", "error", "-y", "-i", str(video), "-vf", "scale=540:-2",
+                    "-c:v", "libx264", "-profile:v", "main", "-preset", "veryfast", "-crf", "28",
+                    "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "96k", "-ac", "2",
+                    "-movflags", "+faststart", "-f", "mp4", str(out)], check=True)
+
+
+def ensure_previews() -> None:
+    for t, r in sorted(releases().items()):
+        names = {a["name"] for a in r["assets"]}
+        full = next((n for n in names if n.endswith(".mp4")), None)
+        if not full or PREVIEW in names:
+            continue
+        with tempfile.TemporaryDirectory() as d:
+            gh("release", "download", t, "--pattern", full, "--dir", d)
+            out = Path(d) / PREVIEW
+            make_preview(Path(d) / full, out)
+            gh("release", "upload", t, str(out))
+        print(f"✓ preview added to {t}")
+
+
+def copy_previews(rel: dict[str, dict], out: Path) -> dict[str, dict]:
+    """Copy previews into the site, newest first, staying well under the 1 GB Pages limit."""
+    target = out / "previews"
+    target.mkdir(exist_ok=True)
+    found: dict[str, dict] = {}
+    used = 0
+    for t, r in sorted(rel.items(), reverse=True):
+        assets = {a["name"]: a for a in r["assets"]}
+        if PREVIEW not in assets or used + assets[PREVIEW]["size"] > MAX_PREVIEW_BYTES:
+            continue
+        gh("release", "download", t, "--pattern", PREVIEW, "--output", str(target / f"{t}.mp4"), "--clobber")
+        used += assets[PREVIEW]["size"]
+        item = {"preview": f"previews/{t}.mp4"}
+        if "poster.jpg" in assets:
+            gh("release", "download", t, "--pattern", "poster.jpg", "--output", str(target / f"{t}.jpg"), "--clobber")
+            item["poster"] = f"previews/{t}.jpg"
+        found[t] = item
+    return found
 
 
 def publish_episode(e: dict, existing: dict[str, dict]) -> bool:
@@ -89,6 +133,7 @@ def cmd_render(_: argparse.Namespace) -> int:
     for e in history()["episodes"]:
         if e.get("status") == "rendered":
             publish_episode(e, existing)
+    ensure_previews()
     return 1 if failed else 0
 
 
@@ -99,7 +144,7 @@ def cmd_publish(_: argparse.Namespace) -> int:
     return 0
 
 
-def site_data(rel: dict[str, dict]) -> dict:
+def site_data(rel: dict[str, dict], previews: dict[str, dict]) -> dict:
     cfg = load_config()
     h = history()
     items = []
@@ -112,13 +157,14 @@ def site_data(rel: dict[str, dict]) -> dict:
         assets = {a["name"]: a for a in rel.get(tag(n), {}).get("assets", [])}
         name = Path(e["output_file"]).name if e.get("output_file") else ""
         video = assets.get(name)
-        poster = assets.get("poster.jpg")
+        local = previews.get(tag(n), {})
         state = "ready" if video else ("archived" if e.get("status") == "rendered" else e.get("status", "scripted"))
         items.append({
             "number": n, "title": e["title"], "state": state, "created_at": e.get("created_at"),
             "duration": e.get("duration_sec"), "file": name,
             "video_url": video["browser_download_url"] if video else None,
-            "poster_url": poster["browser_download_url"] if poster else None,
+            "preview_url": local.get("preview"),
+            "poster_url": local.get("poster"),
             "text": upload_fields(ep, cfg),
         })
     return {"series": h.get("series_title", ""), "episodes": items}
@@ -129,7 +175,8 @@ def cmd_site(a: argparse.Namespace) -> int:
     shutil.rmtree(out, ignore_errors=True)
     shutil.copytree(ROOT / "site", out)
     rel = {} if a.offline else releases()
-    (out / "episodes.json").write_text(json.dumps(site_data(rel), ensure_ascii=False), encoding="utf-8")
+    previews = copy_previews(rel, out) if rel else {}
+    (out / "episodes.json").write_text(json.dumps(site_data(rel, previews), ensure_ascii=False), encoding="utf-8")
     (out / ".nojekyll").write_text("")
     print(f"✓ site built: {out}")
     return 0

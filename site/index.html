@@ -90,10 +90,15 @@ function card(e) {
   top.append(el("span", "", `EPISODE ${e.number}${secs}`), el("span", "state", STATES[e.state] || e.state));
   a.append(top, el("h2", "", e.title));
   if (e.video_url) {
-    const v = el("video"); v.controls = true; v.playsInline = true; v.preload = "metadata"; v.src = e.video_url;
-    if (e.poster_url) v.poster = e.poster_url;
-    const d = el("a", "primary", "Download video"); d.href = e.video_url; d.setAttribute("download", e.file);
-    a.append(v, d);
+    if (e.preview_url) {
+      const v = el("video"); v.controls = true; v.playsInline = true; v.preload = "none"; v.src = e.preview_url;
+      if (e.poster_url) v.poster = e.poster_url;
+      a.append(v);
+    } else {
+      a.append(el("div", "notice", "Preview is not available for this episode. The download still works."));
+    }
+    const d = el("a", "primary", "Download full video"); d.href = e.video_url; d.setAttribute("download", e.file);
+    a.append(d);
   } else {
     const msg = e.state === "archived" ? "Video moved to your laptop archive. The text below is still available."
       : e.state === "failed" ? "This render failed. It will be repaired on the next nightly run."

@@ -61,7 +61,7 @@ jobs:
         if: ${{ !cancelled() }}
         run: python tools/cloud.py site
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         if: ${{ !cancelled() }}
         with:
           path: _site

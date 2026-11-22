@@ -21,9 +21,6 @@ jobs:
   render:
     runs-on: ubuntu-24.04
     timeout-minutes: 90
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     env:
       GH_TOKEN: ${{ github.token }}
     steps:
@@ -66,13 +63,20 @@ jobs:
         with:
           path: _site
 
-      - name: Deploy web app
-        id: deploy
-        if: ${{ !cancelled() }}
-        uses: actions/deploy-pages@v4
-
       - name: Report render failure
         if: ${{ steps.render.outcome == 'failure' }}
         run: |
           echo "One or more episodes failed to render. See the Render pending episodes step."
           exit 1
+
+  deploy:
+    needs: render
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy web app
+        id: deploy
+        uses: actions/deploy-pages@v4

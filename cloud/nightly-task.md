@@ -12,6 +12,8 @@ In this cloud environment, run Python with this prefix instead of `uv run`:
 4. Otherwise write the next 2 episodes, following steps 1 to 5 of `claude-commands/next-episode.md`, including
    validation with `build_video.py --validate-only` and the picture check with `preview_visuals.py`.
    Do NOT run the full render.
+   If NASA cannot be reached and the pictures cannot be checked, stop, push nothing, and report that the
+   environment must allow `images-api.nasa.gov` and `images-assets.nasa.gov`.
 5. Commit only `scripts/episode_*.json` and `series_history.json`, then push directly to the `main` branch.
    If the push is rejected, run `git pull --rebase origin main` and push again.
 6. Report the episode numbers, titles and next cliffhanger.

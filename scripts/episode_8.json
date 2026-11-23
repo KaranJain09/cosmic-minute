@@ -1,0 +1,223 @@
+{
+  "episode_number": 8,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 8: Is Planet Nine Real?",
+  "slug": "light-speed-stop-8-planet-nine",
+  "topic": "Light-speed journey stop 8: the Kuiper Belt and Pluto (~5.5 light-hours; Pluto demoted 2006; New Horizons 2015; hypothesized Planet Nine ~5-10 Earth masses, orbit ~10,000-20,000 years, never observed)",
+  "links_to_previous": "Answers episode 7's cliffhanger (a ninth planet beyond Neptune?): maybe, unconfirmed. The journey continues past Neptune through the Kuiper Belt, then toward interstellar space.",
+  "hook": "Is a ninth planet hiding out here?",
+  "title_card": "PLANET NINE?",
+  "cliffhanger_question": "Has anything humans built actually left the solar system? Yes or no?",
+  "summary": "Answer: maybe. Scientists think odd orbits of distant icy worlds hint at an unseen planet 5 to 10 times Earth's mass, but nobody has ever seen it. Pluto sits ~5.5 light-hours away, demoted in 2006 and visited by New Horizons in 2015. Next stop: interstellar space.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Is a ninth planet hiding out here?",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Kuiper Belt artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "The answer: maybe. Nobody has ever seen it.",
+      "on_screen_text": "THE ANSWER: *MAYBE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Planet Nine artist concept",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA17801"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "Past Neptune lies the Kuiper Belt, a ring of icy leftovers.",
+      "on_screen_text": "THE *KUIPER* BELT",
+      "visual": {
+        "backend": "nasa",
+        "query": "Kuiper Belt",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA21868"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "Pluto lives here, about five and a half light-hours away.",
+      "on_screen_text": "*5.5* LIGHT-HOURS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Pluto New Horizons global color",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "In two thousand six, astronomers demoted it to a dwarf planet.",
+      "on_screen_text": "DEMOTED IN *2006*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Pluto New Horizons",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA19857"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "Then in twenty fifteen, New Horizons found mountains of ice there.",
+      "on_screen_text": "ICE *MOUNTAINS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Pluto mountains New Horizons",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "PIA20202"
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "Astronomers noticed distant icy worlds all swinging the same strange way.",
+      "on_screen_text": "ALL *TILTED* THE SAME",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sedna trans-Neptunian object",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA17308"
+      }
+    },
+    {
+      "id": 8,
+      "role": "reveal",
+      "narration": "Scientists think a massive planet might be tugging them, five to ten times Earth's mass.",
+      "on_screen_text": "*5-10x* EARTH'S MASS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Neptune Voyager 2",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA02210"
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "Its orbit could last ten thousand to twenty thousand years.",
+      "on_screen_text": "*10,000+* YEAR ORBIT",
+      "visual": {
+        "backend": "nasa",
+        "query": "solar system orbits diagram",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA23681"
+      }
+    },
+    {
+      "id": 10,
+      "role": "twist",
+      "narration": "Yet no telescope has ever spotted it. It might not exist at all.",
+      "on_screen_text": "NEVER *SEEN*",
+      "visual": {
+        "backend": "nasa",
+        "query": "telescope night sky Vera Rubin Observatory",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA09232"
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "Either way, we're leaving the planets behind. Something human-made already has.",
+      "on_screen_text": "LEAVING THE *PLANETS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager spacecraft",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA22915"
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, interstellar space. Has anything we built actually left the solar system? Yes or no?",
+      "on_screen_text": "LEFT THE *SOLAR SYSTEM*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 1 spacecraft",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA14113"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Is Planet Nine Real? 🪐 #Shorts",
+    "instagram_caption": "Is a ninth planet hiding beyond Neptune? 🪐\n\nScientists think odd orbits hint at an unseen planet, but nobody has ever seen it.\n\nPart 8 of the light-speed journey. Next stop: interstellar space.",
+    "description": "Light-speed journey, stop 8: the Kuiper Belt and Pluto, about 5.5 light-hours from Earth. Scientists think odd orbits of distant icy worlds may hint at an unseen planet 5 to 10 times Earth's mass, but it has never been observed.",
+    "pinned_comment": "Has anything humans built left the solar system? YES or NO? 👇 Part 9 answers it.",
+    "hashtags": [
+      "#planetnine",
+      "#pluto",
+      "#space",
+      "#lightspeed",
+      "#kuiperbelt",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

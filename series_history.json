@@ -100,6 +100,30 @@
       "created_at": "2026-11-22T22:34:31.565353+00:00",
       "duration_sec": 52.77,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 8,
+      "title": "Light Speed Stop 8: Is Planet Nine Real?",
+      "topic": "Light-speed journey stop 8: the Kuiper Belt and Pluto (~5.5 light-hours; Pluto demoted 2006; New Horizons 2015; hypothesized Planet Nine ~5-10 Earth masses, orbit ~10,000-20,000 years, never observed)",
+      "hook": "Is a ninth planet hiding out here?",
+      "cliffhanger_question": "Has anything humans built actually left the solar system? Yes or no?",
+      "summary": "Answer: maybe. Scientists think odd orbits of distant icy worlds hint at an unseen planet 5 to 10 times Earth's mass, but nobody has ever seen it. Pluto sits ~5.5 light-hours away, demoted in 2006 and visited by New Horizons in 2015. Next stop: interstellar space.",
+      "script_file": "scripts/episode_8.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-23T22:46:35.526653+00:00"
+    },
+    {
+      "episode_number": 9,
+      "title": "Light Speed Stop 9: Voyager 1 Escaped",
+      "topic": "Light-speed journey stop 9: interstellar space and Voyager 1 (left heliosphere 2012; launched 1977; ~1 light-day away; ~17 km/s; golden record; Proxima Centauri ~4.2 light-years, Proxima b in habitable zone)",
+      "hook": "Yes. One machine has already escaped.",
+      "cliffhanger_question": "Could the planet at our nearest star hold life? Yes or no?",
+      "summary": "Answer: yes, Voyager 1 entered interstellar space in 2012. Launched in 1977, it is about one light-day away, moving ~17 km/s, and still talks to Earth. Even so, the nearest star is about 70,000 years away at that speed. Next stop: Proxima Centauri.",
+      "script_file": "scripts/episode_9.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-23T22:46:35.526753+00:00"
     }
   ]
 }

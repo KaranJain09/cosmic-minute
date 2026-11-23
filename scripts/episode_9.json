@@ -1,0 +1,219 @@
+{
+  "episode_number": 9,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 9: Voyager 1 Escaped",
+  "slug": "light-speed-stop-9-voyager-1",
+  "topic": "Light-speed journey stop 9: interstellar space and Voyager 1 (left heliosphere 2012; launched 1977; ~1 light-day away; ~17 km/s; golden record; Proxima Centauri ~4.2 light-years, Proxima b in habitable zone)",
+  "links_to_previous": "Answers episode 8's cliffhanger (has anything human-made left the solar system?): yes, Voyager 1. The journey continues into interstellar space toward the nearest star.",
+  "hook": "Yes. One machine has already escaped.",
+  "title_card": "IT ESCAPED",
+  "cliffhanger_question": "Could the planet at our nearest star hold life? Yes or no?",
+  "summary": "Answer: yes, Voyager 1 entered interstellar space in 2012. Launched in 1977, it is about one light-day away, moving ~17 km/s, and still talks to Earth. Even so, the nearest star is about 70,000 years away at that speed. Next stop: Proxima Centauri.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Yes. One machine has already escaped.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 1 spacecraft",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA17460"
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "Voyager One left the Sun's bubble in twenty twelve.",
+      "on_screen_text": "VOYAGER *1* ESCAPED",
+      "visual": {
+        "backend": "nasa",
+        "query": "heliosphere Voyager interstellar space",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA16485"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "Launched in nineteen seventy-seven, it's still talking to Earth.",
+      "on_screen_text": "LAUNCHED *1977*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 1 launch Titan Centaur",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "It's now about one light-day away. A radio signal takes twenty-four hours.",
+      "on_screen_text": "*1* LIGHT-DAY",
+      "visual": {
+        "backend": "nasa",
+        "query": "Deep Space Network antenna",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "Its computers hold less memory than a single photo on your phone.",
+      "on_screen_text": "LESS THAN *1* PHOTO",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager spacecraft computer",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA22915"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "It carries a golden record with greetings, music, and sounds of Earth.",
+      "on_screen_text": "THE *GOLDEN* RECORD",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager golden record",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "Out here, the Sun is just another bright star.",
+      "on_screen_text": "JUST ANOTHER *STAR*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Pale Blue Dot Voyager 1",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "reveal",
+      "narration": "It flies about seventeen kilometers every second.",
+      "on_screen_text": "*17* KM EVERY SECOND",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 1 trajectory",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA17461"
+      }
+    },
+    {
+      "id": 9,
+      "role": "twist",
+      "narration": "Even at that speed, the nearest star is about seventy thousand years away.",
+      "on_screen_text": "*70,000* YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way stars Hubble",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "narration": "Light makes that trip in just over four years.",
+      "on_screen_text": "*4.2* LIGHT-YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Alpha Centauri Proxima Centauri Hubble",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "That star, Proxima Centauri, has a planet in its habitable zone.",
+      "on_screen_text": "PLANET IN THE *HABITABLE ZONE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Proxima Centauri b exoplanet artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA23689"
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, Proxima. Could that planet hold life? Yes or no?",
+      "on_screen_text": "LIFE *NEXT DOOR*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanet artist concept red dwarf",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA23689"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "This Machine Left Our Solar System 🚀 #Shorts",
+    "instagram_caption": "Voyager 1 left the Sun's bubble in 2012. 🚀\n\nIt's about one light-day away and still talking to Earth.\n\nPart 9 of the light-speed journey. Next stop: Proxima Centauri.",
+    "description": "Light-speed journey, stop 9: interstellar space. Voyager 1, launched in 1977, entered interstellar space in 2012 and is now about one light-day from Earth. At its speed, the nearest star is about 70,000 years away.",
+    "pinned_comment": "Could the planet at our nearest star hold life? YES or NO? 👇 Part 10 answers it.",
+    "hashtags": [
+      "#voyager1",
+      "#interstellar",
+      "#space",
+      "#lightspeed",
+      "#goldenrecord",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

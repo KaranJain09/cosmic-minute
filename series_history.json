@@ -137,9 +137,11 @@
       "cliffhanger_question": "Are there more planets than stars in our galaxy? Yes or no?",
       "summary": "Answer: maybe. Proxima b orbits in its star's habitable zone, 4.2 light-years away, but flares and tidal locking may strip its air. We still don't know if it has an atmosphere. Next stop: the Milky Way.",
       "script_file": "scripts/episode_10.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-24T22:46:52.828653+00:00"
+      "output_file": "upload videos/ep_010_light-speed-stop-10-proxima-b.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-24T22:46:52.828653+00:00",
+      "duration_sec": 45.9,
+      "voice_engine": "edge"
     },
     {
       "episode_number": 11,
@@ -149,9 +151,11 @@
       "cliffhanger_question": "Is the Milky Way on a collision course with another galaxy? Yes or no?",
       "summary": "Answer: yes, astronomers estimate most stars have at least one planet. The Milky Way is about 100,000 light-years across with hundreds of billions of stars and a black hole at its heart. Next stop: our neighbor Andromeda.",
       "script_file": "scripts/episode_11.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-24T22:46:52.828739+00:00"
+      "output_file": "upload videos/ep_011_light-speed-stop-11-milky-way.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-24T22:46:52.828739+00:00",
+      "duration_sec": 45.97,
+      "voice_engine": "edge"
     }
   ]
 }

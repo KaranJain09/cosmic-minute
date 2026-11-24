@@ -1,0 +1,224 @@
+{
+  "episode_number": 11,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 11: The Milky Way",
+  "slug": "light-speed-stop-11-milky-way",
+  "topic": "Light-speed journey stop 11: the Milky Way (~100,000 light-years across; ~100-400 billion stars; most stars have planets; Sun ~26,000 light-years from center; orbit ~230 million years; Sagittarius A* ~4 million Suns)",
+  "links_to_previous": "Answers episode 10's cliffhanger (more planets than stars?): yes, on average at least one planet per star. The journey continues across the Milky Way.",
+  "hook": "Yes. Planets outnumber stars.",
+  "title_card": "PLANETS EVERYWHERE",
+  "cliffhanger_question": "Is the Milky Way on a collision course with another galaxy? Yes or no?",
+  "summary": "Answer: yes, astronomers estimate most stars have at least one planet. The Milky Way is about 100,000 light-years across with hundreds of billions of stars and a black hole at its heart. Next stop: our neighbor Andromeda.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Yes. Planets outnumber stars.",
+      "on_screen_text": "PLANETS *EVERYWHERE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanets Kepler artist concept many planets",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA19830"
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "Astronomers estimate most stars have at least one planet.",
+      "on_screen_text": "MOST STARS *HAVE* PLANETS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Kepler space telescope exoplanets",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA17445"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "Now we leave Proxima and zoom out to our home galaxy.",
+      "on_screen_text": "THE *MILKY WAY*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way galaxy",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "zoom_out"
+        },
+        "nasa_id": "PIA19341"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "It's about one hundred thousand light-years across.",
+      "on_screen_text": "*100,000* LIGHT-YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way galaxy structure artist concept",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA03239"
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "Light takes a hundred thousand years just to cross it.",
+      "on_screen_text": "*100,000* YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way galaxy stars",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA03654"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "It holds somewhere between one hundred and four hundred billion stars.",
+      "on_screen_text": "*100-400* BILLION STARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way center Hubble stars",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "We live in a quiet spiral arm, about twenty-six thousand light-years from the center.",
+      "on_screen_text": "*26,000* LIGHT-YEARS OUT",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way spiral arms Spitzer",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e001990"
+      }
+    },
+    {
+      "id": 8,
+      "role": "reveal",
+      "narration": "The Sun circles the center once every two hundred and thirty million years.",
+      "on_screen_text": "ONE LAP: *230M* YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way galaxy rotation",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA17996"
+      }
+    },
+    {
+      "id": 9,
+      "role": "twist",
+      "narration": "At the center sits a black hole, about four million times the Sun's mass.",
+      "on_screen_text": "BLACK HOLE: *4M* SUNS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sagittarius A* black hole Event Horizon Telescope",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA16214"
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "narration": "In twenty twenty-two, we finally photographed it.",
+      "on_screen_text": "FIRST *PHOTO*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sagittarius A* black hole image Event Horizon Telescope",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "PIA17009"
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "And the Milky Way has a giant neighbor, the Andromeda galaxy.",
+      "on_screen_text": "MEET *ANDROMEDA*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Andromeda galaxy",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA15416"
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, Andromeda. Is it on a collision course with us? Yes or no?",
+      "on_screen_text": "*COLLISION* COURSE?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Andromeda galaxy Milky Way collision artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA12832"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Our Galaxy Is Bigger Than You Think 🌌 #Shorts",
+    "instagram_caption": "The Milky Way is about 100,000 light-years across. 🌌\n\nHundreds of billions of stars, and a black hole at the center.\n\nPart 11 of the light-speed journey. Next stop: Andromeda.",
+    "description": "Light-speed journey, stop 11: the Milky Way. About 100,000 light-years across, hundreds of billions of stars, most with planets, and a supermassive black hole at its center.",
+    "pinned_comment": "Is the Milky Way on a collision course with another galaxy? YES or NO? 👇 Part 12 answers it.",
+    "hashtags": [
+      "#milkyway",
+      "#galaxy",
+      "#space",
+      "#lightspeed",
+      "#blackhole",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

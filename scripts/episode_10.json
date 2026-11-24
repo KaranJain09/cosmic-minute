@@ -1,0 +1,220 @@
+{
+  "episode_number": 10,
+  "series_title": "Cosmic Minute",
+  "title": "Light Speed Stop 10: Proxima b, Life?",
+  "slug": "light-speed-stop-10-proxima-b",
+  "topic": "Light-speed journey stop 10: Proxima Centauri b (4.2 light-years; ~11-day year; habitable zone; red dwarf flares; probably tidally locked; atmosphere unknown)",
+  "links_to_previous": "Answers episode 9's cliffhanger (could the planet at our nearest star hold life?): maybe, nobody knows yet. The journey continues out to the wider galaxy.",
+  "hook": "Maybe. Nobody knows yet.",
+  "title_card": "LIFE NEXT DOOR?",
+  "cliffhanger_question": "Are there more planets than stars in our galaxy? Yes or no?",
+  "summary": "Answer: maybe. Proxima b orbits in its star's habitable zone, 4.2 light-years away, but flares and tidal locking may strip its air. We still don't know if it has an atmosphere. Next stop: the Milky Way.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "Maybe. Nobody knows yet.",
+      "on_screen_text": "LIFE *NEXT DOOR*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanet artist concept red dwarf",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA23689"
+      }
+    },
+    {
+      "id": 2,
+      "role": "reveal",
+      "narration": "Proxima b sits in its star's habitable zone, where water could stay liquid.",
+      "on_screen_text": "HABITABLE *ZONE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Proxima Centauri b exoplanet artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA19827"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "narration": "It's about the size of Earth, and it's only four light-years away.",
+      "on_screen_text": "*4.2* LIGHT-YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Alpha Centauri Proxima Centauri Hubble",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "But its year lasts just eleven days.",
+      "on_screen_text": "*11* DAY YEAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanet orbit red dwarf artist concept",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA23408"
+      }
+    },
+    {
+      "id": 5,
+      "role": "twist",
+      "narration": "Its star is a red dwarf, and red dwarfs throw violent flares.",
+      "on_screen_text": "VIOLENT *FLARES*",
+      "visual": {
+        "backend": "nasa",
+        "query": "red dwarf star flare Hubble",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA21473"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "narration": "One flare could blast the planet with radiation, and strip away its air.",
+      "on_screen_text": "STRIPPED *AIR*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "stellar flare radiation artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA21473"
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "It's also probably tidally locked, one side always facing its star.",
+      "on_screen_text": "ONE SIDE *FOREVER*",
+      "visual": {
+        "backend": "nasa",
+        "query": "tidally locked exoplanet artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "twist",
+      "narration": "So one side may burn, while the other freezes.",
+      "on_screen_text": "*BURN* OR *FREEZE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanet day night side artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "narration": "The thin ring between them might be mild enough for life.",
+      "on_screen_text": "THE *TWILIGHT* ZONE",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanet terminator twilight artist concept",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pan_left"
+        },
+        "nasa_id": "PIA21470"
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "narration": "We can't see its atmosphere yet. Scientists think telescopes may soon.",
+      "on_screen_text": "ATMOSPHERE: *UNKNOWN*",
+      "visual": {
+        "backend": "nasa",
+        "query": "James Webb Space Telescope",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "build",
+      "narration": "But our galaxy holds hundreds of billions of stars.",
+      "on_screen_text": "*100s* OF BILLIONS",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way galaxy stars",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "role": "cta",
+      "narration": "Next stop, the Milky Way. Are there more planets than stars? Yes or no?",
+      "on_screen_text": "MORE *PLANETS*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "exoplanets Kepler artist concept many planets",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA19830"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Could Life Exist Next Door? 🌍 #Shorts",
+    "instagram_caption": "Proxima b orbits our nearest star, just 4.2 light-years away. 🌍\n\nIt might be mild enough for life, or blasted bare by flares. Nobody knows yet.\n\nPart 10 of the light-speed journey. Next stop: the Milky Way.",
+    "description": "Light-speed journey, stop 10: Proxima Centauri b. It orbits in the habitable zone of our nearest star, but flares and tidal locking may strip its atmosphere. Scientists don't yet know if it has air at all.",
+    "pinned_comment": "Are there more planets than stars in our galaxy? YES or NO? 👇 Part 11 answers it.",
+    "hashtags": [
+      "#proximab",
+      "#exoplanet",
+      "#space",
+      "#lightspeed",
+      "#alienlife",
+      "#astronomy",
+      "#spacefacts",
+      "#science",
+      "#nasa",
+      "#shorts"
+    ]
+  }
+}

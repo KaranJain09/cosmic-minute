@@ -128,6 +128,30 @@
       "created_at": "2026-11-23T22:46:35.526753+00:00",
       "duration_sec": 46.07,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 10,
+      "title": "Light Speed Stop 10: Proxima b, Life?",
+      "topic": "Light-speed journey stop 10: Proxima Centauri b (4.2 light-years; ~11-day year; habitable zone; red dwarf flares; probably tidally locked; atmosphere unknown)",
+      "hook": "Maybe. Nobody knows yet.",
+      "cliffhanger_question": "Are there more planets than stars in our galaxy? Yes or no?",
+      "summary": "Answer: maybe. Proxima b orbits in its star's habitable zone, 4.2 light-years away, but flares and tidal locking may strip its air. We still don't know if it has an atmosphere. Next stop: the Milky Way.",
+      "script_file": "scripts/episode_10.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-24T22:46:52.828653+00:00"
+    },
+    {
+      "episode_number": 11,
+      "title": "Light Speed Stop 11: The Milky Way",
+      "topic": "Light-speed journey stop 11: the Milky Way (~100,000 light-years across; ~100-400 billion stars; most stars have planets; Sun ~26,000 light-years from center; orbit ~230 million years; Sagittarius A* ~4 million Suns)",
+      "hook": "Yes. Planets outnumber stars.",
+      "cliffhanger_question": "Is the Milky Way on a collision course with another galaxy? Yes or no?",
+      "summary": "Answer: yes, astronomers estimate most stars have at least one planet. The Milky Way is about 100,000 light-years across with hundreds of billions of stars and a black hole at its heart. Next stop: our neighbor Andromeda.",
+      "script_file": "scripts/episode_11.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-24T22:46:52.828739+00:00"
     }
   ]
 }

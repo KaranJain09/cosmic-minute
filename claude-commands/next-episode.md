@@ -28,8 +28,22 @@ Rules:
 
 ## 3. Write the script (`scripts/episode_{N}.json`, schema in CLAUDE.md §3)
 
+**Language: Hinglish, like an Indian friend excitedly telling you something.** The voice is the Hindi voice
+`hi-IN-SwaraNeural`, so every scene has two versions of the same line, with the SAME number of words:
+- `narration`: Roman Hinglish, shown as captions. e.g. `"Bhai, socho... yeh kis cheez se bana hai?"`
+- `speech`: the same words for the voice, Hindi words in Devanagari, English words in Latin letters.
+  e.g. `"भाई, सोचो... ये किस चीज़ से बना है?"`. Numbers as Hindi words in speech (सात सौ), digits only in on_screen_text.
+- Tone: casual and fun. Use "Bhai, socho...", "Yeh dekho!", "Sabse crazy part?", "Aur suno...", "Pata hai kya?".
+  Keep science words people know in English (NASA, Mars, black hole, gravity, star, planet). Avoid shuddh Hindi
+  ("antariksh", "grah") and avoid long English sentences. Punctuation drives emotion: use "!", "?" and "..." on purpose.
+- `delivery` per scene sets the emotion: `excited` (hook, big numbers), `curious` (questions, setup), `shock`
+  (twist, scary or crazy fact), `serious` (warnings, sad facts), `question` (the ending), `normal`. Change it often;
+  never three scenes in a row with the same delivery.
+- on_screen_text and title_card: short Roman Hinglish or English in capitals ("PAHAAD JITNA BHAARI", "SABSE CRAZY PART").
+- Upload text in Hinglish (Roman letters), hashtags in English plus 2 Hindi-audience tags (#hindi #spacefactshindi).
+
 **The first 2 seconds (most important):**
-- Scene 1 = `role: "hook"`, max 8 words, spoken in under 2.5 s. Lead with the single most shocking, specific claim.
+- Scene 1 = `role: "hook"`, max 8 words (Hinglish: 6-7, Hindi speech is slower), spoken in under 2.5 s. Lead with the single most shocking, specific claim.
   Patterns that work: a surprising number ("A day on Venus lasts longer than its year."), a threat or stake for the
   viewer ("You have 3 nights to see this."), breaking news ("NASA just found water where it shouldn't be."),
   a "you" scenario ("If you fell into Jupiter, this happens.").

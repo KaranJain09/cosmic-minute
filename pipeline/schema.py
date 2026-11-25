@@ -14,9 +14,11 @@ REQUIRED = [
     "cliffhanger_question", "summary", "scenes", "upload",
 ]
 ANGLES = {"news", "event", "evergreen"}
+DELIVERIES = {"normal", "excited", "curious", "shock", "serious", "question"}
 # openers that only make sense to someone who saw a previous reel, or that waste the first second
 WEAK_OPENERS = ("yes", "no", "maybe", "so ", "so,", "today", "hey", "hi ", "welcome", "in this video",
-                "did you know", "have you ever", "let's", "here's", "answer", "part ", "next stop")
+                "did you know", "have you ever", "let's", "here's", "answer", "part ", "next stop",
+                "toh", "dosto", "namaste", "hello", "kya aap jaante", "aaj hum")
 UPLOAD_REQUIRED = ["youtube_title", "instagram_caption", "description", "pinned_comment", "hashtags"]
 
 MIN_WORDS, MAX_WORDS = 70, 105   # 25-40 s at a fast, clear pace
@@ -74,6 +76,11 @@ def validate(ep: dict) -> tuple[list[str], list[str]]:
             warns.append(f"{tag}: {n} words (target 4-11 so the picture changes every 1.5-3.5 s)")
         if any(len(sent.split()) > 12 for sent in re.split(r"[.!?]", nar)):
             warns.append(f"{tag}: a sentence is over 12 words; split it so it is easy to follow")
+        if s.get("delivery") and s["delivery"] not in DELIVERIES:
+            errors.append(f"{tag}: delivery '{s['delivery']}' not in {sorted(DELIVERIES)}")
+        sp = (s.get("speech") or "").strip()
+        if sp and abs(len(sp.split()) - len(nar.split())) > max(2, len(nar.split()) // 4):
+            warns.append(f"{tag}: speech and narration word counts differ a lot; captions may drift")
         ost = s.get("on_screen_text")
         if ost and word_count(strip_markup(ost)) > 6:
             warns.append(f"{tag}: on_screen_text over 6 words")

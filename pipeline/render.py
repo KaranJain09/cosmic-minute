@@ -18,6 +18,7 @@ from .config import resolve
 from .ffmpeg import decode_audio, open_encoder
 from .metadata import write_caption_file
 from .tts import get_tts
+from .tts.base import relabel
 from .visuals import SceneCtx, get_visual
 from .visuals.overlay import SceneOverlay
 
@@ -75,8 +76,20 @@ def build(script: Path, cfg: dict, *, force: bool = False, tts_override: str | N
         print(f"→ voice: {engine} {voice.get('voice_id') or (cfg['tts'].get(engine) or {}).get('voice', '')}")
         cache = resolve(cfg["paths"]["build_dir"]) / "cache" / "tts"
         clips, words_per_scene, n_frames = [], [], []
+        deliveries = (cfg["tts"].get(engine) or {}).get("delivery") or {}
+        role_delivery = {"hook": "excited", "twist": "shock", "cta": "question"}
+        if engine == "edge" and str(cfg["tts"]["edge"].get("voice", "")).startswith("hi-") and \
+                any(not s.get("speech") for s in ep["scenes"]):
+            print("  warn: Hindi voice but some scenes have no 'speech' (Hindi script); they will sound less natural")
         for s in ep["scenes"]:
-            path, words = tts.cached(s["narration"], cache, voice)
+            scene_voice = dict(voice)
+            mood = s.get("delivery") or role_delivery.get(s.get("role"), "normal")
+            scene_voice.update(deliveries.get(mood) or {})
+            # "speech" (optional) is what the voice reads, e.g. Hindi script; captions always show "narration"
+            spoken = (s.get("speech") or "").strip() or s["narration"]
+            path, words = tts.cached(spoken, cache, scene_voice)
+            if spoken != s["narration"]:
+                words = relabel(words, s["narration"])
             a = decode_audio(path, sr)
             # trim leading/trailing silence the engine adds (keep 40 ms)
             nz = np.nonzero(np.abs(a) > 0.003)[0]

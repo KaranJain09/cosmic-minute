@@ -46,6 +46,24 @@ def align_to_script(text: str, words: list[Word]) -> list[Word]:
     return words
 
 
+def relabel(words: list[Word], display: str) -> list[Word]:
+    """Put the caption text (e.g. Roman Hinglish) onto timings from what was spoken (e.g. Hindi script).
+
+    Same word count -> one-to-one. Otherwise each caption word gets the matching share of the spoken timeline."""
+    tokens = [t for t in re.split(r"\s+", display.strip()) if t]
+    if not tokens or not words:
+        return words
+    n, m = len(words), len(tokens)
+    if n == m:
+        return [Word(t, w.start, w.end) for t, w in zip(tokens, words)]
+    out = []
+    for i, tok in enumerate(tokens):
+        a = min(n - 1, i * n // m)
+        b = max(a, min(n - 1, (i + 1) * n // m - 1))
+        out.append(Word(tok, words[a].start, words[b].end))
+    return out
+
+
 def estimate_words(text: str, total: float) -> list[Word]:
     """Fallback timings spread across `total` seconds, weighted by word length."""
     tokens = [t for t in re.split(r"\s+", text.strip()) if t]

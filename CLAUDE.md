@@ -110,7 +110,9 @@ When the user says "make the next episode" (or "make today's 2 episodes"):
     {
       "id": 1,
       "role": "hook | build | reveal | twist | cta",
-      "narration": "spoken text for this scene (6-18 words)",
+      "narration": "caption text, Roman Hinglish (4-11 words)",
+      "speech": "same words for the voice: Hindi in Devanagari, English in Latin",
+      "delivery": "excited | curious | shock | serious | question | normal",
       "on_screen_text": "short emphasis text (<= 6 words), *stars* = accent color, or null",
       "visual": {
         "backend": "nasa | kinetic | kenburns | stock",
@@ -219,7 +221,11 @@ The hook scene shows `title_card` as a tilted yellow card plus a white flash on 
 - **Niche: Space & science, standalone viral reels** (changed 2026-11-25 from a linked series, which lost viewers who
   had not seen the previous part). Each reel must hook a stranger in the first 2 s, be easy to follow, fast, and
   topical. Facts must be accurate; flag uncertain or speculative claims as such in narration ("scientists think…").
-- **Voice: edge-tts `en-US-AvaMultilingualNeural` (female, chosen by the user), rate +12%.** Set only in `config.yaml` (`tts.engine` + voice).
+- **Language: Hinglish** (changed 2026-11-25). Captions show Roman Hinglish (`narration`); the voice reads `speech`
+  (same words, Hindi in Devanagari, English in Latin). Each scene's `delivery` (excited/curious/shock/serious/question/
+  normal) changes speed and pitch, which is the free way to add emotion. ElevenLabs free tier was ruled out: about 10
+  reels a month, non-commercial only.
+- **Voice: edge-tts `hi-IN-SwaraNeural` (female, chosen by the user from samples), base rate +12%.** Set only in `config.yaml` (`tts.engine` + voice).
   Alternatives: Kokoro (local), edge Indian English (`en-IN-PrabhatNeural` / `en-IN-NeerjaNeural`) or edge Multilingual US voices. ElevenLabs optional.
 - **Visual style: real NASA imagery (backend `nasa`) with kinetic text on top.** Every scene gets a concrete `query`.
   Kinetic look (used as fallback / for abstract scenes): Deep-space palette: near-black/indigo gradient backgrounds with a subtle starfield and parallax drift, accent colors `#FFD400` (highlight) and `#4FC3F7` (cyan), bold condensed display font, pop/zoom/shake text animations, simple vector shapes (planets, orbits, arrows, counters) for numbers and scale comparisons. `kenburns`/`stock` remain optional per scene.

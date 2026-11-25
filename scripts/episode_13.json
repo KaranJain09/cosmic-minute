@@ -1,0 +1,235 @@
+{
+  "episode_number": 13,
+  "series_title": "Cosmic Minute",
+  "title": "Ek Tukda, Pahaad Jitna Bhaari: Neutron Star",
+  "slug": "neutron-star-sugar-cube-hinglish",
+  "topic": "Evergreen: neutron stars. Sugar-cube-sized piece weighs about a billion tons (NASA's 'a mountain' comparison); more mass than the Sun in a ~20 km ball; born when a giant star's core collapses in a supernova; some spin over 700 times a second.",
+  "angle": "evergreen",
+  "sources": [
+    "https://science.nasa.gov/universe/stars/types/",
+    "https://www.nasa.gov/mission/nicer/"
+  ],
+  "hook": "Chini ka cube, pahaad jitna bhaari!",
+  "title_card": "PAHAAD JITNA BHAARI",
+  "cliffhanger_question": "Ise paas se dekhoge? Haan ya naa?",
+  "summary": "Hinglish evergreen reel: a sugar-cube-sized piece of a neutron star weighs about as much as a mountain. Formed when a giant star's core collapses; more mass than the Sun packed into about 20 km; some spin over 700 times a second; gravity near it would flatten you.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Chini ka cube, pahaad jitna bhaari!",
+      "speech": "चीनी का cube, पहाड़ जितना भारी!",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "magnetar",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA26274"
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Bhai, socho... yeh kis cheez se bana hai?",
+      "speech": "भाई, सोचो... ये किस चीज़ से बना है?",
+      "on_screen_text": "YEH *KYA* HAI?",
+      "visual": {
+        "backend": "nasa",
+        "query": "magnetar",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA10711"
+      }
+    },
+    {
+      "id": 3,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Jawab hai, ek neutron star.",
+      "speech": "जवाब है, एक neutron star.",
+      "on_screen_text": "*NEUTRON* STAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "pulsar",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA21085"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Jab ek giant star explode hota hai,",
+      "speech": "जब एक giant star explode होता है,",
+      "on_screen_text": "*SUPERNOVA*!",
+      "visual": {
+        "backend": "nasa",
+        "query": "Cassiopeia A",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA03519"
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "serious",
+      "narration": "uska core andar ki taraf girkar dab jaata hai.",
+      "speech": "उसका core अंदर की तरफ गिरकर दब जाता है।",
+      "on_screen_text": "CORE *DAB JAATA* HAI",
+      "visual": {
+        "backend": "nasa",
+        "query": "Crab Nebula",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA03606"
+      }
+    },
+    {
+      "id": 6,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Suraj se zyada mass, sirf ek shehar jitni jagah mein!",
+      "speech": "सूरज से ज़्यादा mass, सिर्फ एक शहर जितनी जगह में!",
+      "on_screen_text": "SURAJ SE *BHAARI*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun SDO",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e000790"
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Yeh sirf bees kilometre chauda hota hai.",
+      "speech": "ये सिर्फ बीस किलोमीटर चौड़ा होता है।",
+      "on_screen_text": "SIRF *20* KM",
+      "visual": {
+        "backend": "nasa",
+        "query": "pulsar",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e001984"
+      }
+    },
+    {
+      "id": 8,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Sabse crazy part? Yeh ghoomta bhi hai.",
+      "speech": "सबसे crazy part? ये घूमता भी है।",
+      "on_screen_text": "SABSE *CRAZY* PART",
+      "visual": {
+        "backend": "nasa",
+        "query": "Crab Nebula",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e000273"
+      }
+    },
+    {
+      "id": 9,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Kuch toh ek second mein saat sau se zyada baar!",
+      "speech": "कुछ तो एक second में सात सौ से ज़्यादा बार!",
+      "on_screen_text": "*700* BAAR / SECOND",
+      "visual": {
+        "backend": "nasa",
+        "query": "pulsar",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA21085"
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "delivery": "serious",
+      "narration": "Iske paas gaye, toh gravity tumhe chapta kar degi.",
+      "speech": "इसके पास गए, तो gravity तुम्हें चपटा कर देगी।",
+      "on_screen_text": "*CHAPTE* HO JAOGE",
+      "visual": {
+        "backend": "nasa",
+        "query": "neutron star merger",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e001099"
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Ise paas se dekhoge? Haan ya naa?",
+      "speech": "इसे पास से देखोगे? हाँ या ना?",
+      "on_screen_text": "HAAN YA *NAA*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Cassiopeia A",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA16606"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Chini Ke Cube Jitna Tukda, Pahaad Jitna Bhaari 🤯 #Shorts",
+    "instagram_caption": "Chini ke cube jitna tukda, pahaad jitna bhaari! 🤯\n\nNeutron star: Suraj se zyada mass, sirf 20 km mein. Aur kuch ek second mein 700 se zyada baar ghoomte hain!\n\nTum ise paas se dekhna chahoge? 👇",
+    "description": "Neutron star ka chini ke cube jitna tukda Earth par lagbhag ek pahaad jitna bhaari hoga (NASA). Yeh tab bante hain jab ek giant star explode hota hai aur uska core dab jaata hai. Suraj se zyada mass sirf lagbhag 20 km mein, aur kuch neutron stars ek second mein 700 se zyada baar ghoomte hain.",
+    "pinned_comment": "Neutron star ko paas se dekhoge? HAAN 😎 ya NAA 😱? 👇",
+    "hashtags": [
+      "#neutronstar",
+      "#pulsar",
+      "#supernova",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#science",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

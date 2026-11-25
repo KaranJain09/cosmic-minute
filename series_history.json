@@ -170,6 +170,20 @@
       "created_at": "2026-11-25T07:00:43+00:00",
       "duration_sec": 30.63,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 13,
+      "title": "Ek Tukda, Pahaad Jitna Bhaari: Neutron Star",
+      "topic": "Evergreen: neutron stars. Sugar-cube-sized piece weighs about a billion tons (NASA's 'a mountain' comparison); more mass than the Sun in a ~20 km ball; born when a giant star's core collapses in a supernova; some spin over 700 times a second.",
+      "hook": "Chini ka cube, pahaad jitna bhaari!",
+      "cliffhanger_question": "Ise paas se dekhoge? Haan ya naa?",
+      "summary": "Hinglish evergreen reel: a sugar-cube-sized piece of a neutron star weighs about as much as a mountain. Formed when a giant star's core collapses; more mass than the Sun packed into about 20 km; some spin over 700 times a second; gravity near it would flatten you.",
+      "script_file": "scripts/episode_13.json",
+      "output_file": "upload videos/ep_013_neutron-star-sugar-cube-hinglish.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-25T10:01:58+00:00",
+      "duration_sec": 32.6,
+      "voice_engine": "edge"
     }
   ]
 }

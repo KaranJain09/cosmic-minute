@@ -194,9 +194,11 @@
       "cliffhanger_question": "Kya yeh kabhi kisi star tak pahunchegi? Haan ya naa?",
       "summary": "News reel: on Nov 18, 2026 Voyager 1 became the first human-made object to reach one light-day from Earth (~25.9 billion km). Signals take a day each way. Voyager 2 reaches the mark around 2035.",
       "script_file": "scripts/episode_14.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-25T00:00:00+00:00"
+      "output_file": "upload videos/ep_014_voyager-1-one-light-day.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-25T00:00:00+00:00",
+      "duration_sec": 36.0,
+      "voice_engine": "edge"
     },
     {
       "episode_number": 15,
@@ -207,9 +209,11 @@
       "cliffhanger_question": "Tumne kabhi Venus ko subah dekha hai? Haan ya naa?",
       "summary": "Event reel: Venus peaks in brightness in the morning sky around Nov 27-29, 2026. Look east, 1-2 hours before sunrise, no telescope needed. Its glow comes from highly reflective clouds hiding a ~465C surface; people often mistake it for a UFO.",
       "script_file": "scripts/episode_15.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-25T00:00:00+00:00"
+      "output_file": "upload videos/ep_015_venus-brightest-this-week.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-25T00:00:00+00:00",
+      "duration_sec": 37.8,
+      "voice_engine": "edge"
     }
   ]
 }

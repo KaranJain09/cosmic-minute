@@ -1,0 +1,236 @@
+{
+  "episode_number": 14,
+  "series_title": "Cosmic Minute",
+  "title": "Voyager 1 Ab Ek Light-Day Door Hai",
+  "slug": "voyager-1-one-light-day",
+  "topic": "News: Voyager 1 reached one light-day (~25.9 billion km) from Earth on Nov 18, 2026 (NASA). First human-made object to do so; a radio message takes a full day each way; Voyager 2 reaches the mark around 2035.",
+  "angle": "news",
+  "sources": [
+    "https://science.nasa.gov/mission/voyager/voyager-1/voyager-1-what-is-a-light-day/",
+    "https://www.popsci.com/science/voyager-1-one-light-day-away-from-earth-nasa/",
+    "https://space.com/space-exploration/voyager/1-light-day-from-earth-nasas-voyager-1-probe-hits-huge-milestone-in-interstellar-space"
+  ],
+  "hook": "Voyager 1 ab ek light-day door hai!",
+  "title_card": "EK DIN DOOR",
+  "cliffhanger_question": "Kya yeh kabhi kisi star tak pahunchegi? Haan ya naa?",
+  "summary": "News reel: on Nov 18, 2026 Voyager 1 became the first human-made object to reach one light-day from Earth (~25.9 billion km). Signals take a day each way. Voyager 2 reaches the mark around 2035.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Voyager 1 ab ek light-day door hai!",
+      "speech": "Voyager 1 अब एक light-day दूर है!",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager spacecraft",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA26353"
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Matlab, light ko wahan pahunchne mein poora ek din lagta hai.",
+      "speech": "मतलब, light को वहाँ पहुँचने में पूरा एक दिन लगता है।",
+      "on_screen_text": "*POORA EK DIN*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager spacecraft",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA21737"
+      }
+    },
+    {
+      "id": 3,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "NASA ne confirm kiya, yeh pehli baar hua hai!",
+      "speech": "NASA ने confirm किया, ये पहली बार हुआ है!",
+      "on_screen_text": "*PEHLI BAAR*",
+      "visual": {
+        "backend": "nasa",
+        "query": "NASA Jet Propulsion Laboratory Voyager",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA23681"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Doori hai lagbhag chhabbis arab kilometre.",
+      "speech": "दूरी है लगभग छब्बीस अरब किलोमीटर।",
+      "on_screen_text": "*26* ARAB KM",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager interstellar space illustration",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA23645"
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Aaj tak insaan ki banayi koi cheez itni door nahi gayi.",
+      "speech": "आज तक इंसान की बनाई कोई चीज़ इतनी दूर नहीं गई।",
+      "on_screen_text": "SABSE *DOOR*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 1 Pale Blue Dot",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "PIA00452"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "serious",
+      "narration": "Ise unnees sau satattar mein launch kiya gaya tha.",
+      "speech": "इसे उन्नीस सौ सतहत्तर में launch किया गया था।",
+      "on_screen_text": "LAUNCH *1977*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager launch Titan Centaur",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA21746"
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Sabse crazy part? Tumhara message wahan ek din mein pahunchega.",
+      "speech": "सबसे crazy part? तुम्हारा message वहाँ एक दिन में पहुँचेगा।",
+      "on_screen_text": "SABSE *CRAZY* PART",
+      "visual": {
+        "backend": "nasa",
+        "query": "Deep Space Network antenna",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA25136"
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Aur jawab wapas aane mein, ek aur din.",
+      "speech": "और जवाब वापस आने में, एक और दिन।",
+      "on_screen_text": "*2* DIN KA INTEZAAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "Deep Space Network antenna",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA24163"
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Phir bhi yeh machine aaj bhi signal bhej rahi hai!",
+      "speech": "फिर भी ये machine आज भी signal भेज रही है!",
+      "on_screen_text": "ABHI BHI *ZINDA*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager golden record",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA14113"
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Voyager 2 ko isme abhi lagbhag nau saal aur lagenge.",
+      "speech": "Voyager 2 को इसमें अभी लगभग नौ साल और लगेंगे।",
+      "on_screen_text": "VOYAGER 2: *2035*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Voyager 2 Neptune",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA02210"
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Kya yeh kabhi kisi star tak pahunchegi? Haan ya naa?",
+      "speech": "क्या ये कभी किसी star तक पहुँचेगी? हाँ या ना?",
+      "on_screen_text": "HAAN YA *NAA*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Milky Way stars",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA13932"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Voyager 1 Ab Ek Light-Day Door! 🚀 #Shorts",
+    "instagram_caption": "Voyager 1 ab ek light-day door hai! 🚀\n\nNASA ke mutabiq 18 November ko yeh pehli insaani machine bani jo itni door pahunchi. Wahan message bhejne mein poora ek din lagta hai.\n\nKya yeh kabhi kisi star tak pahunchegi? 👇",
+    "description": "NASA ne confirm kiya ki Voyager 1 ne 18 November 2026 ko Earth se ek light-day (lagbhag 25.9 billion km) ki doori paar kar li. Yeh aisa karne wali pehli insaani cheez hai. Radio signal ko wahan pahunchne mein ek din lagta hai. Voyager 2 lagbhag 2035 mein yeh mark chhuega.",
+    "pinned_comment": "Kya Voyager 1 kabhi kisi star tak pahunchegi? HAAN 🚀 ya NAA 🤔? 👇",
+    "hashtags": [
+      "#voyager1",
+      "#nasa",
+      "#interstellar",
+      "#space",
+      "#astronomy",
+      "#science",
+      "#universe",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

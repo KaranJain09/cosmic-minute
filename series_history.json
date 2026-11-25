@@ -184,6 +184,32 @@
       "created_at": "2026-11-25T10:01:58+00:00",
       "duration_sec": 32.6,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 14,
+      "title": "Voyager 1 Ab Ek Light-Day Door Hai",
+      "topic": "News: Voyager 1 reached one light-day (~25.9 billion km) from Earth on Nov 18, 2026 (NASA). First human-made object to do so; a radio message takes a full day each way; Voyager 2 reaches the mark around 2035.",
+      "angle": "news",
+      "hook": "Voyager 1 ab ek light-day door hai!",
+      "cliffhanger_question": "Kya yeh kabhi kisi star tak pahunchegi? Haan ya naa?",
+      "summary": "News reel: on Nov 18, 2026 Voyager 1 became the first human-made object to reach one light-day from Earth (~25.9 billion km). Signals take a day each way. Voyager 2 reaches the mark around 2035.",
+      "script_file": "scripts/episode_14.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-25T00:00:00+00:00"
+    },
+    {
+      "episode_number": 15,
+      "title": "Subah Dekho: Venus Sabse Zyada Chamak Raha Hai",
+      "topic": "Event: Venus reaches greatest brilliancy in the morning sky around Nov 27-29, 2026. Look east/east-southeast 1-2 hours before dawn; no telescope needed. Venus's brightness comes from its reflective sulfuric-acid clouds.",
+      "angle": "event",
+      "hook": "Is hafte Venus sabse zyada chamakta hai!",
+      "cliffhanger_question": "Tumne kabhi Venus ko subah dekha hai? Haan ya naa?",
+      "summary": "Event reel: Venus peaks in brightness in the morning sky around Nov 27-29, 2026. Look east, 1-2 hours before sunrise, no telescope needed. Its glow comes from highly reflective clouds hiding a ~465C surface; people often mistake it for a UFO.",
+      "script_file": "scripts/episode_15.json",
+      "output_file": null,
+      "status": "scripted",
+      "created_at": "2026-11-25T00:00:00+00:00"
     }
   ]
 }

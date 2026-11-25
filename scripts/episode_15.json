@@ -1,0 +1,236 @@
+{
+  "episode_number": 15,
+  "series_title": "Cosmic Minute",
+  "title": "Subah Dekho: Venus Sabse Zyada Chamak Raha Hai",
+  "slug": "venus-brightest-this-week",
+  "topic": "Event: Venus reaches greatest brilliancy in the morning sky around Nov 27-29, 2026. Look east/east-southeast 1-2 hours before dawn; no telescope needed. Venus's brightness comes from its reflective sulfuric-acid clouds.",
+  "angle": "event",
+  "sources": [
+    "https://www.skyatnightmagazine.com/news/venus-morning-star-november-december-2026",
+    "https://earthsky.org/astronomy-essentials/venus-brightest-greatest-brilliancy-greatest-illuminated-extent-2/",
+    "https://in-the-sky.org/news.php?id=20261127_11_100"
+  ],
+  "hook": "Is hafte Venus sabse zyada chamakta hai!",
+  "title_card": "SUBAH DEKHO",
+  "cliffhanger_question": "Tumne kabhi Venus ko subah dekha hai? Haan ya naa?",
+  "summary": "Event reel: Venus peaks in brightness in the morning sky around Nov 27-29, 2026. Look east, 1-2 hours before sunrise, no telescope needed. Its glow comes from highly reflective clouds hiding a ~465C surface; people often mistake it for a UFO.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Is hafte Venus sabse zyada chamakta hai!",
+      "speech": "इस हफ्ते Venus सबसे ज़्यादा चमकता है!",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "S91-50688"
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Subah ka sabse chamakta tara, asal mein ek planet hai.",
+      "speech": "सुबह का सबसे चमकता तारा, असल में एक planet है।",
+      "on_screen_text": "TARA NAHI, *PLANET*",
+      "visual": {
+        "backend": "nasa",
+        "query": "dawn sky planet horizon",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "iss024e006136"
+      }
+    },
+    {
+      "id": 3,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Woh Venus hai, apni sabse tez roshni par!",
+      "speech": "वो Venus है, अपनी सबसे तेज़ रोशनी पर!",
+      "on_screen_text": "*VENUS* PEAK PAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus Magellan",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA01544"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Kab dekhein? Subah, suraj nikalne se ek-do ghante pehle.",
+      "speech": "कब देखें? सुबह, सूरज निकलने से एक-दो घंटे पहले।",
+      "on_screen_text": "SUNRISE SE *1-2 GHANTE*",
+      "visual": {
+        "backend": "nasa",
+        "query": "sunrise horizon Earth atmosphere",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "iss074e0796544"
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "East ki taraf dekho, aasmaan mein thoda neeche.",
+      "speech": "East की तरफ़ देखो, आसमान में थोड़ा नीचे।",
+      "on_screen_text": "*EAST* KI TARAF",
+      "visual": {
+        "backend": "nasa",
+        "query": "sunrise ISS horizon",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "iss073e1068530"
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Telescope nahi chahiye, bas aankhein kaafi hain!",
+      "speech": "Telescope नहीं चाहिए, बस आँखें काफ़ी हैं!",
+      "on_screen_text": "BAS *AANKHEIN*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus Mariner 10",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA23791"
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Sabse crazy part? Yeh chamak zehreele baadlon ki wajah se hai.",
+      "speech": "सबसे crazy part? ये चमक ज़हरीले बादलों की वजह से है।",
+      "on_screen_text": "*ZEHREELE* BAADAL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus clouds Akatsuki",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA23791"
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "delivery": "serious",
+      "narration": "Neeche ki garmi seesa bhi pighla deti hai.",
+      "speech": "नीचे की गर्मी सीसा भी पिघला देती है।",
+      "on_screen_text": "*465°C* SURFACE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus surface Venera",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "S91-50687"
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Kai log ise galti se UFO samajh lete hain!",
+      "speech": "कई लोग इसे ग़लती से UFO समझ लेते हैं!",
+      "on_screen_text": "*UFO*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA13001"
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Isliye kal subah, alarm laga ke zaroor dekho.",
+      "speech": "इसलिए कल सुबह, alarm लगा के ज़रूर देखो।",
+      "on_screen_text": "*ALARM* LAGAO",
+      "visual": {
+        "backend": "nasa",
+        "query": "dawn sky planet horizon",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "STS052-23-022"
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Tumne kabhi Venus ko subah dekha hai? Haan ya naa?",
+      "speech": "तुमने कभी Venus को सुबह देखा है? हाँ या ना?",
+      "on_screen_text": "HAAN YA *NAA*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Venus Magellan",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA01544"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Is Hafte Subah Dekho: Venus Sabse Bright! 🌅 #Shorts",
+    "instagram_caption": "Is hafte Venus sabse zyada chamakta hai! 🌅\n\nSubah suraj nikalne se 1-2 ghante pehle East ki taraf dekho. Telescope ki zaroorat nahi!\n\nTumne kabhi Venus ko subah dekha hai? 👇",
+    "description": "Venus is hafte (lagbhag 27-29 November 2026) subah ke aasmaan mein apni sabse tez chamak par hai. Suraj nikalne se 1-2 ghante pehle East/East-southeast ki taraf dekho. Venus ki chamak uske reflective baadlon se aati hai, aur surface ki garmi lagbhag 465°C hai.",
+    "pinned_comment": "Kya tum Venus subah dekhoge? HAAN 🌅 ya NAA 😴? 👇",
+    "hashtags": [
+      "#venus",
+      "#morningstar",
+      "#skywatching",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#planets",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

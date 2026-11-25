@@ -10,13 +10,17 @@ FITS = {"auto", "cover", "contain"}
 MOTIONS = {"pop", "zoom_in", "zoom_out", "shake", "slide_up", "words", "count", "pan_left", "pan_right", "pan_up"}
 DECOR = {"auto", "none", "planet", "ring_planet", "sun", "black_hole", "moon"}
 REQUIRED = [
-    "episode_number", "title", "slug", "topic", "links_to_previous", "hook", "title_card",
+    "episode_number", "title", "slug", "topic", "hook", "title_card",
     "cliffhanger_question", "summary", "scenes", "upload",
 ]
+ANGLES = {"news", "event", "evergreen"}
+# openers that only make sense to someone who saw a previous reel, or that waste the first second
+WEAK_OPENERS = ("yes", "no", "maybe", "so ", "so,", "today", "hey", "hi ", "welcome", "in this video",
+                "did you know", "have you ever", "let's", "here's", "answer", "part ", "next stop")
 UPLOAD_REQUIRED = ["youtube_title", "instagram_caption", "description", "pinned_comment", "hashtags"]
 
-MIN_WORDS, MAX_WORDS = 110, 145
-MIN_SCENES, MAX_SCENES = 8, 12
+MIN_WORDS, MAX_WORDS = 70, 105   # 25-40 s at a fast, clear pace
+MIN_SCENES, MAX_SCENES = 9, 15
 
 
 def word_count(text: str) -> int:
@@ -64,10 +68,12 @@ def validate(ep: dict) -> tuple[list[str], list[str]]:
             continue
         n = word_count(nar)
         total += n
-        if n < 4 or n > 22:
-            errors.append(f"{tag}: {n} words (hard limit 4-22, target 6-18)")
-        elif n < 6 or n > 18:
-            warns.append(f"{tag}: {n} words (target 6-18 for 3-5 s scenes)")
+        if n < 2 or n > 16:
+            errors.append(f"{tag}: {n} words (hard limit 2-16, target 4-11)")
+        elif n < 4 or n > 11:
+            warns.append(f"{tag}: {n} words (target 4-11 so the picture changes every 1.5-3.5 s)")
+        if any(len(sent.split()) > 12 for sent in re.split(r"[.!?]", nar)):
+            warns.append(f"{tag}: a sentence is over 12 words; split it so it is easy to follow")
         ost = s.get("on_screen_text")
         if ost and word_count(strip_markup(ost)) > 6:
             warns.append(f"{tag}: on_screen_text over 6 words")
@@ -98,8 +104,11 @@ def validate(ep: dict) -> tuple[list[str], list[str]]:
             errors.append("last scene must have role 'cta'")
         if "?" not in scenes[-1].get("narration", ""):
             warns.append("last scene narration has no question mark; end on a direct question")
-        if word_count(scenes[0].get("narration", "")) > 9:
-            warns.append("hook narration is long; it must fit in <= 3 s (~9 words max)")
+        hook = scenes[0].get("narration", "").strip()
+        if word_count(hook) > 8:
+            warns.append("hook narration is long; it must land in <= 2.5 s (8 words max)")
+        if hook.lower().startswith(WEAK_OPENERS):
+            warns.append("hook opens weakly or depends on another reel; lead with the most shocking claim")
         if ep["hook"].strip() != scenes[0].get("narration", "").strip():
             warns.append("'hook' differs from scene 1 narration")
 
@@ -117,18 +126,24 @@ def validate(ep: dict) -> tuple[list[str], list[str]]:
     if len(up.get("youtube_title", "")) > 100:
         errors.append("upload.youtube_title over 100 chars")
 
-    if ep["episode_number"] > 1 and len(ep["links_to_previous"]) < 15:
-        warns.append("links_to_previous is too thin; explain how this continues the last episode")
+    angle = ep.get("angle")
+    if angle not in ANGLES:
+        warns.append(f"angle should be one of {sorted(ANGLES)}")
+    if angle in ("news", "event") and not ep.get("sources"):
+        warns.append("news/event reels need 'sources' (URLs used to verify the facts and dates)")
+    for k in ("cliffhanger_question", "title", "hook", "title_card"):
+        if re.search(r"\b(part|episode|ep\.?|stop)\s*#?\d", str(ep.get(k, "")), re.I):
+            warns.append(f"{k} mentions a part/episode number; reels must stand alone")
     return errors, warns
 
 
 def timing_warnings(durations: list[float], total: float) -> list[str]:
     w = []
-    if durations and durations[0] > 3.2:
-        w.append(f"hook runs {durations[0]:.2f}s (target <= 3 s)")
+    if durations and durations[0] > 2.7:
+        w.append(f"hook runs {durations[0]:.2f}s (target <= 2.5 s)")
     for i, d in enumerate(durations[1:], 2):
-        if d < 2.5 or d > 5.8:
-            w.append(f"scene {i} runs {d:.2f}s (target 3-5 s)")
-    if not (45 <= total <= 60):
-        w.append(f"total runtime {total:.1f}s (target 45-60 s)")
+        if d < 1.2 or d > 4.0:
+            w.append(f"scene {i} runs {d:.2f}s (target 1.5-3.5 s)")
+    if not (25 <= total <= 40):
+        w.append(f"total runtime {total:.1f}s (target 25-40 s)")
     return w

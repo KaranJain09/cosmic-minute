@@ -29,12 +29,12 @@ def upload_fields(ep: dict, cfg: dict) -> dict:
     return {
         "youtube_title": yt_title,
         "youtube_description": (
-            f"{up['description']}\n\n{series} - Episode {n}. Follow {yt_handle} for Part {n + 1}. "
+            f"{up['description']}\n\nFollow {yt_handle} for a new space fact every day. "
             f"Instagram: {ig_handle}\n\n{' '.join(tags[:5])}"
         ),
         "instagram_caption": (
-            f"{up['instagram_caption']}\n\n{series} - Ep {n} | Part {n + 1} drops next. "
-            f"Follow {ig_handle} | YouTube: {yt_handle}\n\n{' '.join(tags[:15])}"
+            f"{up['instagram_caption']}\n\nFollow {ig_handle} for a new space fact every day. "
+            f"YouTube: {yt_handle}\n\n{' '.join(tags[:15])}"
         ),
         "pinned_comment": up["pinned_comment"],
         "hashtags": " ".join(tags),
@@ -62,7 +62,7 @@ TITLE:
 DESCRIPTION:
 {up['description']}
 
-{series} - Episode {n}. Follow {yt_handle} for Part {n + 1}. Instagram: {ig_handle}
+Follow {yt_handle} for a new space fact every day. Instagram: {ig_handle}
 
 {yt_tags}
 
@@ -70,7 +70,7 @@ DESCRIPTION:
 CAPTION:
 {up['instagram_caption']}
 
-{series} - Ep {n} | Part {n + 1} drops next. Follow {ig_handle} | YouTube: {yt_handle}
+Follow {ig_handle} for a new space fact every day. YouTube: {yt_handle}
 
 {ig_tags}
 

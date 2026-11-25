@@ -1,0 +1,212 @@
+{
+  "episode_number": 12,
+  "series_title": "Cosmic Minute",
+  "title": "NASA Found Mars Rocks That Can Trap Fossils",
+  "slug": "mars-rocks-that-trap-fossils",
+  "topic": "News: Perseverance finds large hydrated-silica rocks at 'Idubi' in Jezero crater (NASA update Nov 16, 2026). On Earth, silica preserves microfossils for billions of years. No life found.",
+  "angle": "news",
+  "sources": [
+    "https://science.nasa.gov/?p=1512060",
+    "https://thedebrief.org/?p=54592",
+    "https://www.ecoticias.com/hoyeco/?p=53582"
+  ],
+  "hook": "NASA found Mars rocks that can trap fossils.",
+  "title_card": "FOSSIL TRAP?",
+  "cliffhanger_question": "Do you think Mars ever had life? Yes or no?",
+  "summary": "News reel: Perseverance found pale rocks at 'Idubi' rich in hydrated silica, which forms with water and on Earth preserves microfossils for billions of years. Earlier finds were too small to study; these are big enough. No life found yet.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "narration": "NASA found Mars rocks that can trap fossils.",
+      "on_screen_text": null,
+      "visual": {
+        "backend": "nasa",
+        "query": "Perseverance rover selfie",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA25681"
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "narration": "If Mars ever had life, this is where it could hide.",
+      "on_screen_text": "LIFE COULD *HIDE* HERE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Jezero crater Mars",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA25022"
+      }
+    },
+    {
+      "id": 3,
+      "role": "reveal",
+      "narration": "The Perseverance rover spotted pale, bright rocks.",
+      "on_screen_text": "PALE *ROCKS*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Perseverance Mastcam-Z rocks Jezero",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA24485"
+      }
+    },
+    {
+      "id": 4,
+      "role": "build",
+      "narration": "Its laser zapped them from meters away.",
+      "on_screen_text": "*LASER* TEST",
+      "visual": {
+        "backend": "nasa",
+        "query": "SuperCam laser Perseverance",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "PIA25289"
+      }
+    },
+    {
+      "id": 5,
+      "role": "reveal",
+      "narration": "They're full of silica that formed with water.",
+      "on_screen_text": "SILICA + *WATER*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Perseverance rock outcrop Mars",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "zoom_in"
+        },
+        "nasa_id": "PIA26575"
+      }
+    },
+    {
+      "id": 6,
+      "role": "twist",
+      "narration": "On Earth, this stuff traps tiny fossils for billions of years.",
+      "on_screen_text": "*BILLIONS* OF YEARS",
+      "visual": {
+        "backend": "nasa",
+        "query": "stromatolites",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "narration": "Some of Earth's oldest life was found this way.",
+      "on_screen_text": "EARTH'S *OLDEST* LIFE",
+      "visual": {
+        "backend": "nasa",
+        "query": "stromatolites",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "ARC-1969-AC87-0086-1"
+      }
+    },
+    {
+      "id": 8,
+      "role": "twist",
+      "narration": "Earlier finds were too small to study up close.",
+      "on_screen_text": "TOO *SMALL* BEFORE",
+      "visual": {
+        "backend": "nasa",
+        "query": "Jezero crater rim Perseverance",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA26379"
+      }
+    },
+    {
+      "id": 9,
+      "role": "reveal",
+      "narration": "These are big enough, and the rover is on it.",
+      "on_screen_text": "BIG ENOUGH *NOW*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Perseverance rover driving Mars",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA23729"
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "narration": "No life has been found. Not yet.",
+      "on_screen_text": "NO LIFE... *YET*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars Hubble",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "zoom_out"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "narration": "Do you think Mars ever had life? Yes or no?",
+      "on_screen_text": "LIFE ON *MARS*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "Mars Hubble",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA01591"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "NASA Found Mars Rocks That Can Trap Fossils 🔴 #Shorts",
+    "instagram_caption": "NASA found Mars rocks that can trap fossils. 🔴\n\nPerseverance just found big, pale rocks full of silica that formed with water. On Earth, this stuff holds fossils for billions of years.\n\nDo you think Mars ever had life? 👇",
+    "description": "NASA's Perseverance rover found pale rocks at 'Idubi' in Jezero crater that are rich in hydrated silica (NASA update, Nov 16, 2026). Silica forms with water, and on Earth it preserves microscopic fossils for billions of years. Earlier silica finds were too small to study up close; these are big enough. No signs of life have been found.",
+    "pinned_comment": "Did Mars ever have life? YES 👽 or NO 🪨? 👇",
+    "hashtags": [
+      "#mars",
+      "#perseverance",
+      "#lifeonmars",
+      "#nasa",
+      "#space",
+      "#astronomy",
+      "#science",
+      "#spacenews",
+      "#marsrover",
+      "#shorts"
+    ]
+  }
+}

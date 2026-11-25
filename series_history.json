@@ -156,6 +156,20 @@
       "created_at": "2026-11-24T22:46:52.828739+00:00",
       "duration_sec": 45.97,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 12,
+      "title": "NASA Found Mars Rocks That Can Trap Fossils",
+      "topic": "News: Perseverance finds large hydrated-silica rocks at 'Idubi' in Jezero crater (NASA update Nov 16, 2026). On Earth, silica preserves microfossils for billions of years. No life found.",
+      "hook": "NASA found Mars rocks that can trap fossils.",
+      "cliffhanger_question": "Do you think Mars ever had life? Yes or no?",
+      "summary": "News reel: Perseverance found pale rocks at 'Idubi' rich in hydrated silica, which forms with water and on Earth preserves microfossils for billions of years. Earlier finds were too small to study; these are big enough. No life found yet.",
+      "script_file": "scripts/episode_12.json",
+      "output_file": "upload videos/ep_012_mars-rocks-that-trap-fossils.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-25T07:00:43+00:00",
+      "duration_sec": 30.63,
+      "voice_engine": "edge"
     }
   ]
 }

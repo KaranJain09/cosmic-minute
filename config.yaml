@@ -28,7 +28,7 @@ tts:
     speed: 1.05
   edge:
     voice: "en-US-AvaMultilingualNeural"   # chosen by user; alt: en-US-AndrewMultilingualNeural, en-IN-PrabhatNeural
-    rate: "+5%"
+    rate: "+12%"
     pitch: "+0Hz"
     volume: "+0%"
   elevenlabs:                     # needs ELEVENLABS_API_KEY in .env
@@ -69,7 +69,7 @@ captions:
 
 audio:
   sample_rate: 48000
-  pad_after_default: 0.15         # silence after each scene's line (s)
+  pad_after_default: 0.08         # silence after each scene's line (s); short = fast pace
   music_dir: "assets/music"       # drop royalty-free .mp3/.wav here
   music_under_speech_db: -20      # music level relative to voice while speaking
   music_gaps_db: -14              # music level relative to voice in pauses
@@ -79,6 +79,6 @@ audio:
   loudness_lufs: -14
 
 overlay:
-  badge: true                     # "UNIVERSE FILES · EP 3" at top
+  badge: true                     # small channel name at top (no episode number)
   cta_text: "COMMENT YOUR ANSWER"
-  follow_text: "FOLLOW FOR PART {next}"
+  follow_text: "FOLLOW FOR DAILY SPACE"

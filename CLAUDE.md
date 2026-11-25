@@ -59,11 +59,11 @@ Uploading_Videos/                 # project root (Windows: C:\Users\Karan\Upload
 When the user says "make the next episode" (or "make today's 2 episodes"):
 
 1. Read `series_history.json` and `config.yaml`.
-2. Pick the next topic so it **logically links to the previous episode**:
-   answer the last `cliffhanger_question`, continue the overarching story/mystery, or advance the numbered series.
-   Never repeat a topic already in history.
+2. Pick a **standalone, trending** topic (web search first): this week's space news, an event viewers can see in
+   the next 14 days, or a jaw-dropping evergreen fact. Verify news/dates in 2 sources. Never repeat a topic in history.
+   Full playbook: `claude-commands/next-episode.md`.
 3. Write `scripts/episode_{N}.json` following the schema in §3 and the rules in §4.
-4. Self-check before saving: word count 110–145, 8–12 scenes, hook ≤ 3 s, last scene is a question/cliffhanger.
+4. Self-check before saving: 70–105 words, 9–15 scenes, hook ≤ 8 words / 2.5 s, last scene is an easy question.
    Run `uv run build_video.py --script ... --validate-only`.
 4b. **Check the pictures**: `uv run preview_visuals.py --script scripts/episode_{N}.json`, then open
    `build/preview/ep_{N:03d}_visuals.jpg` with the Read tool. Column [0] is what will render. If a picture is wrong
@@ -98,10 +98,11 @@ When the user says "make the next episode" (or "make today's 2 episodes"):
   "title": "string (on-screen + upload title, <= 60 chars)",
   "slug": "kebab-case-slug",
   "topic": "string",
-  "links_to_previous": "how this answers/continues the previous episode (or 'series premiere')",
-  "hook": "0-3s pattern-interrupt line (also scene 1 narration)",
-  "title_card": "BOLD 2-5 WORD TITLE shown during the hook",
-  "cliffhanger_question": "polarizing question / teaser for next episode",
+  "angle": "news | event | evergreen",
+  "sources": ["https://... (required for news/event: where the facts and dates were verified)"],
+  "hook": "<= 8 word shock line, <= 2.5 s (also scene 1 narration)",
+  "title_card": "BOLD 2-4 WORD TITLE readable on frame 1",
+  "cliffhanger_question": "the easy closing question viewers answer in the comments",
   "summary": "1-2 sentence summary for series memory",
   "voice": {},   // optional; config.yaml tts.engine decides. Only applied if "engine" equals that engine
   "music": { "file": "assets/music/track.mp3", "volume_db": -20 },
@@ -141,13 +142,15 @@ When the user says "make the next episode" (or "make today's 2 episodes"):
 
 | Rule | Value |
 |---|---|
-| Length | 45–60 s, 110–145 spoken words total |
-| Hook (scene 1) | ≤ 3 s; pattern-interrupt line + bold title card on screen |
-| Scenes | 8–12; each 3–5 s (≈ 6–18 words) so visuals change constantly |
-| Last scene | `role: "cta"`; direct polarizing question or cliffhanger tied to next episode |
-| On-screen text | ≤ 6 words, never a copy of the caption line |
-| Language | Short sentences, second person, concrete numbers, no filler intros ("Hey guys", "In this video") |
-| Continuity | Every episode after #1 must reference/resolve the previous `cliffhanger_question` |
+| Length | 25–40 s, 70–105 spoken words total (voice at +12%) |
+| Hook (scene 1) | ≤ 8 words, ≤ 2.5 s; the most shocking specific claim + 2–4 word title card readable on frame 1. Never "Yes/No/Maybe/So/Did you know" |
+| Seconds 2–5 | Why it matters to the viewer + an open loop paid off near the end |
+| Scenes | 9–15; each 1.5–3.5 s (4–11 words), one idea per scene |
+| Last scene | `role: "cta"`; one easy question answerable in a word (stored in `cliffhanger_question`) |
+| On-screen text | ≤ 5 words, never a copy of the caption line |
+| Language | Sentences ≤ 12 words, everyday words a 12-year-old knows, second person, concrete comparisons |
+| Standalone | No part/episode numbers, no answering a previous reel. `episode_number` is an internal ID only |
+| Topics | `angle`: news (last 7 days) / event (next 14 days) / evergreen; news and event need `sources` URLs |
 
 ---
 
@@ -213,8 +216,10 @@ The hook scene shows `title_card` as a tilted yellow card plus a white flash on 
 
 ## 8. Channel settings (filled in from user answers)
 
-- **Niche: Space & science.** One overarching series (e.g. "Universe Files #N"): each episode answers the previous cliffhanger and opens a new, bigger question. Facts must be accurate; flag uncertain or speculative claims as such in narration ("scientists think…").
-- **Voice: edge-tts `en-US-AvaMultilingualNeural` (female, chosen by the user), rate +5%.** Set only in `config.yaml` (`tts.engine` + voice).
+- **Niche: Space & science, standalone viral reels** (changed 2026-11-25 from a linked series, which lost viewers who
+  had not seen the previous part). Each reel must hook a stranger in the first 2 s, be easy to follow, fast, and
+  topical. Facts must be accurate; flag uncertain or speculative claims as such in narration ("scientists think…").
+- **Voice: edge-tts `en-US-AvaMultilingualNeural` (female, chosen by the user), rate +12%.** Set only in `config.yaml` (`tts.engine` + voice).
   Alternatives: Kokoro (local), edge Indian English (`en-IN-PrabhatNeural` / `en-IN-NeerjaNeural`) or edge Multilingual US voices. ElevenLabs optional.
 - **Visual style: real NASA imagery (backend `nasa`) with kinetic text on top.** Every scene gets a concrete `query`.
   Kinetic look (used as fallback / for abstract scenes): Deep-space palette: near-black/indigo gradient backgrounds with a subtle starfield and parallax drift, accent colors `#FFD400` (highlight) and `#4FC3F7` (cyan), bold condensed display font, pop/zoom/shake text animations, simple vector shapes (planets, orbits, arrows, counters) for numbers and scale comparisons. `kenburns`/`stock` remain optional per scene.

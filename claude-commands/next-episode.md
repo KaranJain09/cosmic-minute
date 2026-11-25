@@ -1,25 +1,85 @@
 ---
-description: Write and render the next linked episode(s). Usage: /next-episode [count, default 2]
+description: Write and render new standalone space reels. Usage: /next-episode [count, default 2]
 ---
 
-Make $ARGUMENTS new episode(s) of the series (if no number was given, make 2: today's daily quota). For EACH episode, in order:
+Make $ARGUMENTS new reel(s) (if no number was given, make 2: today's daily quota). Every reel stands alone:
+a stranger who has never seen the channel must understand it and want to watch to the end.
 
-1. Read `CLAUDE.md`, `config.yaml` and `series_history.json`. Find the highest `episode_number` (N). The new episode is N+1.
-   If the last episode has `status: "failed"` or `"scripted"`, fix and render that one first instead of writing a new one.
-2. Read the last episode's script (`scripts/episode_N.json`). The new episode MUST open by answering its `cliffhanger_question`
-   (state the answer within the first 2 scenes) and continue the series `arc` in `series_history.json`. Don't repeat a topic.
-3. Write `scripts/episode_{N+1}.json` following the schema in CLAUDE.md §3 and the rules in §4:
-   - 110–145 spoken words, 8–12 scenes, hook ≤ 9 words, last scene role `cta` ending in a polarizing question that sets up episode N+2.
-   - Space & science facts must be accurate. Use round, well-established figures; say "about"/"scientists think" for estimates.
-   - Write numbers in narration the way they should be spoken; put punchy numbers in `on_screen_text` with `*highlight*` markup.
-   - Vary `motion` and `decor` across scenes; use `count` motion when on_screen_text has a number.
-   - Every scene: `"backend": "nasa"` with a concrete `query` naming the real object/mission (e.g. "Venus Magellan radar
-     globe", "Mars Hubble", "Sun SDO ultraviolet"). Use `"fit": "contain"` for whole planets/moons/stars.
-4. Validate: `uv run build_video.py --script scripts/episode_{N+1}.json --validate-only`. Fix every error and warning you reasonably can.
-4b. Pictures: `uv run preview_visuals.py --script scripts/episode_{N+1}.json`, open `build/preview/ep_XXX_visuals.jpg`
-   with the Read tool and make sure column [0] of each row matches the narration. Pin better ones with `"nasa_id"`
-   or rewrite the query, re-run until every scene looks right (no podium photos, logos, charts or off-topic shots).
-5. Append the episode to `series_history.json` (`status: "scripted"`, `output_file: null`).
-6. Render: `uv run build_video.py --script scripts/episode_{N+1}.json`.
-   If runtime warnings say the video is under 45 s or over 60 s, adjust the narration and re-render with `--force`.
-7. Report: the output file in `upload videos/`, the runtime, and the cliffhanger for the next episode.
+## 1. Read the state
+Read `CLAUDE.md`, `config.yaml` and `series_history.json`. The new reel's `episode_number` is the highest number + 1
+(it is only an internal ID; never say it on screen or in narration). If the last entry has `status: "failed"` or
+`"scripted"`, fix and render that one first.
+
+## 2. Pick the topic (this decides the views)
+Search the web first. Use this order and make the two daily reels different types (ideally one news/event + one evergreen):
+1. **news**: a space story from the last 7 days that people are talking about (discovery, launch, mission milestone,
+   new telescope image, asteroid, solar storm, record).
+2. **event**: something people can see or follow in the next 14 days (meteor shower peak, eclipse, supermoon,
+   planets lining up, aurora forecast, comet, big launch). Give the exact date and the best time to look.
+3. **evergreen**: a jaw-dropping fact with a fresh angle (black holes, the Sun, Moon, Mars, scale of the universe).
+
+Rules:
+- Verify every news or date claim in at least 2 reputable sources (NASA, ESA, ISRO, JPL, space.com, Sky & Telescope,
+  timeanddate.com, major newspapers). Put the URLs in `sources`. Never invent or guess news. If it can't be verified,
+  pick another topic.
+- The reel is posted the next morning, so the story must still be true and relevant then.
+- Never repeat a topic or angle already in `series_history.json`.
+- Choose topics a 12-year-old can understand in one sentence. Skip anything that needs a diagram to explain.
+
+## 3. Write the script (`scripts/episode_{N}.json`, schema in CLAUDE.md §3)
+
+**The first 2 seconds (most important):**
+- Scene 1 = `role: "hook"`, max 8 words, spoken in under 2.5 s. Lead with the single most shocking, specific claim.
+  Patterns that work: a surprising number ("A day on Venus lasts longer than its year."), a threat or stake for the
+  viewer ("You have 3 nights to see this."), breaking news ("NASA just found water where it shouldn't be."),
+  a "you" scenario ("If you fell into Jupiter, this happens.").
+- Never open with Yes/No/Maybe/So/Today/Hey/"Did you know"/"In this video", and never answer a previous reel.
+- `title_card` = 2-4 BIG words that create curiosity (e.g. "IT'S SHRINKING", "3 NIGHTS LEFT"). It is readable
+  on frame 1.
+- Scene 1's picture must be the most striking image in the reel.
+
+**Seconds 2-5:** scene 2 explains why it matters to the viewer and opens a loop ("and scientists can't explain why",
+"but the scary part is the last one"). Pay that loop off near the end.
+
+**The body:** one idea per scene, 4-11 words per scene, max 12 words per sentence. Plain everyday words, no jargon
+(if a term is needed, explain it in 3 words). Compare to things people know: football fields, cars, the size of India,
+a human lifetime. Every 2-3 scenes add a new surprise. No filler, no "basically", no "fun fact".
+
+**The ending:** last scene `role: "cta"`: one easy question viewers can answer in a word or emoji
+("Would you watch it? Yes or no?", "Which planet should be next?"). `cliffhanger_question` holds that question.
+No "part 2", "next episode" or "follow for more" in narration (the pill on screen already says it).
+
+**Numbers & limits:** 70-105 spoken words, 9-15 scenes, 25-40 s total. Write numbers the way they are spoken in
+narration; put punchy numbers in `on_screen_text` with `*highlight*` and `count` motion. on_screen_text <= 5 words,
+never a copy of the narration. Vary motion and camera every scene.
+
+**Accuracy:** round, well-established figures; "about"/"scientists think" for estimates. Space facts must be correct.
+
+**Extra fields:** `"angle": "news" | "event" | "evergreen"`, `"sources": ["https://..."]` (required for news/event).
+`links_to_previous` is not needed. Titles never contain part or episode numbers.
+
+**Upload text:** `youtube_title` = curiosity + keyword, under 70 characters, ends with #Shorts. `instagram_caption`
+starts with the hook line, then 1-2 short lines, then the question. `pinned_comment` = the question with 2 answer
+options. 8-12 hashtags: 3 topic-specific (e.g. #geminids), 3 trending-wide (#space #nasa #astronomy), rest niche.
+
+**Visuals:** every scene `"backend": "nasa"` with a concrete `query` naming the real object or mission, `"fit":
+"contain"` for whole planets/moons/stars. Fast camera moves (zoom_in on the hook).
+
+## 4. Validate
+`build_video.py --script scripts/episode_{N}.json --validate-only`. Fix every error and every warning you reasonably can,
+especially hook warnings.
+
+## 4b. Pictures
+`preview_visuals.py --script scripts/episode_{N}.json`, open `build/preview/ep_{N:03d}_visuals.jpg` with the Read tool,
+make sure column [0] of each row matches the narration. Pin better ones with `"nasa_id"` or rewrite the query. No
+podium photos, logos, charts, people in offices or off-topic shots. The hook picture must be dramatic.
+
+## 5. Record it
+Append the reel to `series_history.json` (`status: "scripted"`, `output_file: null`, plus `angle`).
+
+## 6. Render (local runs only; the 4 AM cloud task skips this, GitHub renders)
+`build_video.py --script scripts/episode_{N}.json`. If runtime warnings say under 25 s or over 40 s, or the hook runs
+over 2.5 s, fix the narration and re-render with `--force`.
+
+## 7. Report
+Output file, runtime, topic type, and the hook line.

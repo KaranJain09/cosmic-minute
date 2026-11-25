@@ -45,7 +45,7 @@ class SceneOverlay:
         self.badge = None
         if cfg["overlay"].get("badge", True):
             series = (ep.get("series_title") or cfg["channel"]["series_title"]).upper()
-            self.badge = pill(f"{series}  ·  EP {ep['episode_number']}", self.fu, 34, (0, 0, 0, 140), self.accent2 + (255,))
+            self.badge = pill(series, self.fu, 30, (0, 0, 0, 120), self.accent2 + (255,))
         self.card = None
         if self.role == "hook" and ep.get("title_card"):
             self.card = title_card(ep["title_card"], self.fd, int(ctx.w * 0.9), self.accent)
@@ -106,15 +106,16 @@ class SceneOverlay:
 
         y_main = self.y_text
         if self.card is not None:
-            k = ease_out_cubic(t / 0.22)
-            s = 1.6 - 0.6 * k
-            jit = 10 * math.sin(t * 80) * clamp(1 - (t - 0.22) / 0.25) if t > 0.22 else 0
-            paste_center(frame, scaled(self.card, s), W / 2 + jit, ctx.h * 0.33, alpha=clamp(t / 0.08))
+            # fully readable on frame 1 (the frame people decide on), then a quick punch and shake
+            k = ease_out_cubic(t / 0.18)
+            s = 1.22 - 0.22 * k
+            jit = 10 * math.sin(t * 80) * clamp(1 - (t - 0.18) / 0.25) if t > 0.18 else 0
+            paste_center(frame, scaled(self.card, s), W / 2 + jit, ctx.h * 0.33)
             y_main = ctx.h * 0.47
             if self.text:
                 img = self._text_img(self.text, 92)
-                paste_center(frame, scaled(img, 0.6 + 0.4 * ease_out_back((t - 0.35) / 0.3)), W / 2, y_main,
-                             alpha=clamp((t - 0.35) / 0.1))
+                paste_center(frame, scaled(img, 0.6 + 0.4 * ease_out_back((t - 0.2) / 0.25)), W / 2, y_main,
+                             alpha=clamp((t - 0.2) / 0.08))
         elif self.text:
             if self.role == "cta":
                 y_main = ctx.h * 0.31
@@ -142,6 +143,6 @@ class SceneOverlay:
                          alpha=clamp((t - 0.25) / 0.1))
             paste_center(frame, self.follow, W / 2, ctx.h * 0.515, alpha=clamp((t - 0.6) / 0.2))
 
-        if self.role == "hook" and t < 0.12:  # pattern-interrupt flash on frame 1
+        if self.role == "hook" and 0 < t < 0.1:  # light flash after frame 1, so frame 1 stays clean and readable
             flash = Image.new("RGB", frame.size, (255, 255, 255))
-            frame.paste(Image.blend(frame, flash, 0.85 * (1 - t / 0.12)))
+            frame.paste(Image.blend(frame, flash, 0.35 * (1 - t / 0.1)))

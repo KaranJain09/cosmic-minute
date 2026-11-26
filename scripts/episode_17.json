@@ -1,0 +1,207 @@
+{
+  "episode_number": 17,
+  "series_title": "Cosmic Minute",
+  "title": "Agar Sooraj Black Hole Ban Jaaye Toh?",
+  "slug": "sun-black-hole-what-if",
+  "topic": "Evergreen: what if the Sun turned into a black hole of the same mass: Earth keeps orbiting; darkness and gravity change arrive after ~8 minutes (speed of light); we would freeze; the Sun is too light to become a black hole naturally.",
+  "angle": "evergreen",
+  "sources": [],
+  "hook": "Sooraj black hole ban jaaye toh kya hoga?",
+  "title_card": "SOORAJ GAYAB",
+  "cliffhanger_question": "Andhera ya thand? Tumhe kya zyada darr lagega?",
+  "summary": "Evergreen: if the Sun became a black hole of the same mass, nothing changes for 8 minutes, then the sky goes dark but Earth keeps orbiting because gravity stays the same; we would freeze. The Sun is too light to ever become a black hole.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Sooraj black hole ban jaaye toh kya hoga?",
+      "speech": "सूरज black hole बन जाए तो क्या होगा?",
+      "on_screen_text": "SOORAJ *GAYAB*",
+      "visual": {
+        "backend": "nasa",
+        "query": "black hole accretion disk",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Pehle aath minute tak, kuch bhi nahi badlega.",
+      "speech": "पहले आठ minute तक, कुछ भी नहीं बदलेगा।",
+      "on_screen_text": "*8 MINUTE* TAK",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun solar flare",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Kyunki roshni aur gravity, dono itni hi der mein pahunchte hain.",
+      "speech": "क्योंकि रोशनी और gravity, दोनों इतनी ही देर में पहुँचते हैं।",
+      "on_screen_text": "ROSHNI = *GRAVITY* SPEED",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun Earth distance light travel",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e000851"
+      }
+    },
+    {
+      "id": 4,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Phir achanak, poora aasmaan andhera ho jaayega.",
+      "speech": "फिर अचानक, पूरा आसमान अंधेरा हो जाएगा।",
+      "on_screen_text": "*ANDHERA*",
+      "visual": {
+        "backend": "nasa",
+        "query": "total solar eclipse totality",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Par Earth black hole mein nahi giregi!",
+      "speech": "पर Earth black hole में नहीं गिरेगी!",
+      "on_screen_text": "NAHI *GIREGI*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Blue Marble Earth",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Kyunki Sooraj ka wazan wahi rahega, toh gravity bhi wahi.",
+      "speech": "क्योंकि सूरज का वज़न वही रहेगा, तो gravity भी वही।",
+      "on_screen_text": "WAZAN *WAHI*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun solar corona",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Earth usi raaste par ghoomti rahegi.",
+      "speech": "Earth उसी रास्ते पर घूमती रहेगी।",
+      "on_screen_text": "*ORBIT* WAHI",
+      "visual": {
+        "backend": "nasa",
+        "query": "Earth from space orbit horizon blue",
+        "fit": "contain",
+        "camera": "pan_left",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "twist",
+      "delivery": "serious",
+      "narration": "Par roshni ke bina hum sab jaldi jam jaayenge.",
+      "speech": "पर रोशनी के बिना हम सब जल्दी जम जाएँगे।",
+      "on_screen_text": "*THAND* AA GAYI",
+      "visual": {
+        "backend": "nasa",
+        "query": "frozen Antarctica ice",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "GSFC_20171208_Archive_e001753"
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Waise Sooraj kabhi black hole nahi banega, woh bahut halka hai.",
+      "speech": "वैसे सूरज कभी black hole नहीं बनेगा, वो बहुत हल्का है।",
+      "on_screen_text": "SOORAJ *HALKA* HAI",
+      "visual": {
+        "backend": "nasa",
+        "query": "Sun star",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA21067"
+      }
+    },
+    {
+      "id": 10,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Andhera ya thand? Tumhe kya zyada darr lagega?",
+      "speech": "अंधेरा या ठंड? तुम्हें क्या ज़्यादा डर लगेगा?",
+      "on_screen_text": "ANDHERA YA *THAND*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "black hole event horizon",
+        "fit": "contain",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Sooraj Black Hole Ban Jaaye Toh? 🕳️ #Shorts",
+    "instagram_caption": "Sooraj black hole ban jaaye toh kya hoga? 🕳️\n\nPehle 8 minute kuch nahi, phir andhera. Par Earth giregi nahi!\n\nAndhera ya thand? Tumhe kya zyada darr lagega? 👇",
+    "description": "Agar Sooraj ek black hole ban jaaye (same wazan ke saath), toh Earth uske orbit mein ghoomti rahegi, par roshni nahi hogi. Waise Sooraj kabhi black hole nahi banega.",
+    "pinned_comment": "Andhera 🌑 ya thand 🥶? Tumhe kya zyada darr lagega? 👇",
+    "hashtags": [
+      "#blackhole",
+      "#sun",
+      "#whatif",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#universe",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

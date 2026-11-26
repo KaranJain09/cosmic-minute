@@ -1,0 +1,208 @@
+{
+  "episode_number": 16,
+  "series_title": "Cosmic Minute",
+  "title": "Sunday Ko Space Station Ke Liye Cargo Launch",
+  "slug": "cygnus-xl-cargo-launch",
+  "topic": "Event: Northrop Grumman CRS-25 Cygnus XL cargo launch on a Falcon 9 targeted Sunday Nov 29, 2026 ~10:47 a.m. EST from Cape Canaveral; ~11,000 lb cargo incl. science experiments; ISS capture by Canadarm2 Dec 1; stays until May 2027.",
+  "angle": "event",
+  "sources": [
+    "https://www.nasa.gov/news-release/nasa-sets-coverage-for-northrop-grumman-crs-25-launch-prelaunch/",
+    "https://www.nasa.gov/missions/station/nasas-northrop-grumman-crs-25-mission-overview/",
+    "https://www.nasa.gov/blogs/spacestation/2026/11/24/crew-awaits-thanksgiving-day-delivery-as-another-cargo-craft-nears-launch/"
+  ],
+  "hook": "Astronauts ke liye Sunday ko cargo launch hoga!",
+  "title_card": "SUNDAY LAUNCH",
+  "cliffhanger_question": "Live launch dekhna chahoge? Haan ya naa?",
+  "summary": "Event reel: Cygnus XL cargo ship launches on Falcon 9 on Nov 29, 2026 (target, may slip), carrying about 11,000 lb (~5,000 kg) of supplies and experiments; Canadarm2 captures it Dec 1; stays at the ISS until May 2027.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Astronauts ke liye Sunday ko cargo launch hoga!",
+      "speech": "Astronauts के लिए Sunday को cargo launch होगा!",
+      "on_screen_text": "SUNDAY *LAUNCH*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Falcon 9 launch Cape Canaveral night",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Is cargo ship ka naam Cygnus XL hai.",
+      "speech": "इस cargo ship का नाम Cygnus XL है।",
+      "on_screen_text": "*CYGNUS* XL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Cygnus spacecraft cargo",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Yeh Falcon 9 rocket se 29 November ko uthegi.",
+      "speech": "ये Falcon 9 rocket से उनतीस November को उठेगी।",
+      "on_screen_text": "29 *NOVEMBER*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Falcon 9 rocket liftoff",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "reveal",
+      "delivery": "excited",
+      "narration": "Andar lagbhag paanch hazaar kilo saaman bhara hai.",
+      "speech": "अंदर लगभग पाँच हज़ार किलो सामान भरा है।",
+      "on_screen_text": "*5000 KG* SAAMAN",
+      "visual": {
+        "backend": "nasa",
+        "query": "Cygnus cargo supplies International Space Station",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Isme experiments bhi hain, jaise cancer ki research.",
+      "speech": "इसमें experiments भी हैं, जैसे cancer की research।",
+      "on_screen_text": "*EXPERIMENTS* BHI",
+      "visual": {
+        "backend": "nasa",
+        "query": "astronaut working inside space station laboratory",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Space station tak pahunchne mein do din lagenge.",
+      "speech": "Space station तक पहुँचने में दो दिन लगेंगे।",
+      "on_screen_text": "*2 DIN* KA SAFAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "International Space Station Earth",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Phir ek robotic arm usse hawa mein pakad legi!",
+      "speech": "फिर एक robotic arm उसे हवा में पकड़ लेगी!",
+      "on_screen_text": "ROBOT *ARM* PAKDEGA",
+      "visual": {
+        "backend": "nasa",
+        "query": "Canadarm2 robotic arm capture",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "delivery": "serious",
+      "narration": "Sabse crazy part? Yeh May tak wahin rukegi.",
+      "speech": "सबसे crazy part? ये May तक वहीं रुकेगी।",
+      "on_screen_text": "MAY *TAK*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Cygnus berthed International Space Station",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Aur station har ghante atthaaees hazaar kilometre bhaagta hai.",
+      "speech": "और station हर घंटे अट्ठाईस हज़ार किलोमीटर भागता है।",
+      "on_screen_text": "*28,000* KM/H",
+      "visual": {
+        "backend": "nasa",
+        "query": "International Space Station orbit over Earth",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "count"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Live launch dekhna chahoge? Haan ya naa?",
+      "speech": "Live launch देखना चाहोगे? हाँ या ना?",
+      "on_screen_text": "HAAN YA *NAA*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "rocket launch plume sky",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Sunday Ko Space Station Cargo Launch! 🚀 #Shorts",
+    "instagram_caption": "Astronauts ke liye Sunday ko cargo launch hoga! 🚀\n\nCygnus XL, Falcon 9 par, 29 November ko (date badal sakti hai). Andar lagbhag 5000 kilo saaman aur experiments.\n\nLive launch dekhna chahoge? Haan ya naa? 👇",
+    "description": "NASA ke mutabiq Northrop Grumman ka Cygnus XL cargo spacecraft 29 November 2026 ko Falcon 9 se launch hone ka target hai (date badal sakti hai). Ye 1 December ko space station se jud jaayega.",
+    "pinned_comment": "Live launch dekhoge? HAAN 🚀 ya NAA 😴? 👇",
+    "hashtags": [
+      "#cygnusxl",
+      "#iss",
+      "#spacex",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#rocketlaunch",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

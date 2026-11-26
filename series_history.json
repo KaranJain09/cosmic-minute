@@ -224,9 +224,11 @@
       "cliffhanger_question": "Live launch dekhna chahoge? Haan ya naa?",
       "summary": "Event reel: Cygnus XL cargo ship launches on Falcon 9 on Nov 29, 2026 (target, may slip), carrying about 11,000 lb (~5,000 kg) of supplies and experiments; Canadarm2 captures it Dec 1; stays at the ISS until May 2027.",
       "script_file": "scripts/episode_16.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-26T22:48:27+00:00"
+      "output_file": "upload videos/ep_016_cygnus-xl-cargo-launch.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-26T22:48:27+00:00",
+      "duration_sec": 32.07,
+      "voice_engine": "edge"
     },
     {
       "episode_number": 17,
@@ -237,9 +239,11 @@
       "cliffhanger_question": "Andhera ya thand? Tumhe kya zyada darr lagega?",
       "summary": "Evergreen: if the Sun became a black hole of the same mass, nothing changes for 8 minutes, then the sky goes dark but Earth keeps orbiting because gravity stays the same; we would freeze. The Sun is too light to ever become a black hole.",
       "script_file": "scripts/episode_17.json",
-      "output_file": null,
-      "status": "scripted",
-      "created_at": "2026-11-26T22:48:27+00:00"
+      "output_file": "upload videos/ep_017_sun-black-hole-what-if.mp4",
+      "status": "rendered",
+      "created_at": "2026-11-26T22:48:27+00:00",
+      "duration_sec": 31.77,
+      "voice_engine": "edge"
     }
   ]
 }

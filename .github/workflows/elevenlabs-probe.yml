@@ -1,0 +1,28 @@
+name: ElevenLabs voice check
+
+# Manual: checks the ElevenLabs key, models and Hindi voices, and makes short samples (about 700 credits).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests==2.34.2
+      - name: Check ElevenLabs
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+        run: python tools/elevenlabs_probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: elevenlabs-samples
+          path: voice_samples/elevenlabs/
+          retention-days: 3

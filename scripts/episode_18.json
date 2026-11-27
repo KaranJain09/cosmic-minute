@@ -1,0 +1,234 @@
+{
+  "episode_number": 18,
+  "series_title": "Cosmic Minute",
+  "title": "NASA Ka Maara Asteroid Pehli Baar Dikha",
+  "slug": "hera-dimorphos-crater",
+  "topic": "News: ESA's Hera released detailed images of Didymos and Dimorphos (~Nov 25-26, 2026): a stadium-sized crater/flattened side on Dimorphos from NASA's 2022 DART impact, hundreds of boulders orbiting, asteroid tumbling; Hera ~25-30 km away, approaching to ~13 km next month.",
+  "angle": "news",
+  "sources": [
+    "https://www.planetary.org/articles/heras-first-close-up-images-of-didymos-and-dimorphos",
+    "https://www.popsci.com/science/dart-mission-hera-asteroid-photos/",
+    "https://www.abc.net.au/news/2026-11-26/new-photos-of-struck-asteroid-dimorphos/107428078",
+    "https://www.iac.es/en/outreach/news/esas-hera-mission-reveals-first-images-asteroid-dimorphos-after-dart-impact"
+  ],
+  "hook": "NASA ka maara asteroid dikh gaya!",
+  "title_card": "ASTEROID KA ZAKHM",
+  "cliffhanger_question": "Asteroid aaye toh tum kya chunoge: takkar ya bhaagna?",
+  "summary": "News reel: ESA's Hera probe sent new close-ups of the asteroid NASA hit in 2022. Dimorphos has a stadium-sized crater, hundreds of boulders orbit the pair, and it still tumbles. Hera moves in to about 13 km next month.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "NASA ka maara asteroid dikh gaya!",
+      "speech": "NASA का मारा asteroid दिख गया!",
+      "on_screen_text": "ASTEROID KA *ZAKHM*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Didymos Dimorphos asteroid Hera",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA25329"
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Do hazaar bais mein NASA ne usse jaanbujhkar takkar maari thi.",
+      "speech": "दो हज़ार बाईस में NASA ने उससे जानबूझकर टक्कर मारी थी।",
+      "on_screen_text": "*2022* MEIN TAKKAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "DART spacecraft asteroid impact",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA25329"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "delivery": "excited",
+      "narration": "Ab Europe ka Hera, bina visa ke wahan pahunch gaya!",
+      "speech": "[laughs] अब Europe का Hera, बिना visa के वहाँ पहुँच गया!",
+      "on_screen_text": "*HERA* PAHUNCHA",
+      "visual": {
+        "backend": "stock",
+        "query": "airport passport stamp",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "reveal",
+      "delivery": "shock",
+      "narration": "Photos mein ek stadium jitna bada gadda dikh raha hai!",
+      "speech": "Photos में एक stadium जितना बड़ा गड्ढा दिख रहा है!",
+      "on_screen_text": "*STADIUM* JITNA GADDA",
+      "visual": {
+        "backend": "nasa",
+        "query": "Dimorphos crater Hera image",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA15146"
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "excited",
+      "narration": "Bhai, yeh toh Mumbai ki sadak se bhi kharaab hai!",
+      "speech": "[laughs] भाई, ये तो Mumbai की सड़क से भी खराब है!",
+      "on_screen_text": "SADAK SE *KHARAAB*",
+      "visual": {
+        "backend": "stock",
+        "query": "pothole road rain traffic",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Aur uske aaspaas sainkdon patthar ghoom rahe hain.",
+      "speech": "और उसके आसपास सैकड़ों पत्थर घूम रहे हैं।",
+      "on_screen_text": "*SAINKDON* PATTHAR",
+      "visual": {
+        "backend": "nasa",
+        "query": "Hubble Dimorphos boulders",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "PIA00136"
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "delivery": "serious",
+      "narration": "Scientists ke hisaab se, yeh us takkar ka malba hai.",
+      "speech": "Scientists के हिसाब से, ये उस टक्कर का मलबा है।",
+      "on_screen_text": "TAKKAR KA *MALBA*",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid debris tail Dimorphos",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "PIA15143"
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Bechara aaj bhi chakkar kha ke ghoom raha hai.",
+      "speech": "[laughs] बेचारा आज भी चक्कर खा के घूम रहा है।",
+      "on_screen_text": "CHAKKAR *CHAKKAR*",
+      "visual": {
+        "backend": "stock",
+        "query": "man dizzy spinning",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Hera agle mahine sirf terah kilometre door se dekhega.",
+      "speech": "Hera अगले महीने सिर्फ़ तेरह किलोमीटर दूर से देखेगा।",
+      "on_screen_text": "*13 KM* DOOR",
+      "visual": {
+        "backend": "nasa",
+        "query": "Hera spacecraft ESA",
+        "fit": "contain",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "PIA24565"
+      }
+    },
+    {
+      "id": 10,
+      "role": "reveal",
+      "delivery": "serious",
+      "narration": "Kyunki dinosaur ke saath jo hua, hum nahi chahte.",
+      "speech": "क्योंकि dinosaur के साथ जो हुआ, हम नहीं चाहते।",
+      "on_screen_text": "*DINOSAUR* JAISA?",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid impact Earth dinosaurs",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA01723"
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Takkar ya bhaagna, tum kya chunoge?",
+      "speech": "Takkar या भागना, तुम क्या चुनोगे?",
+      "on_screen_text": "TAKKAR YA *BHAAGNA*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "asteroid close up space rock",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "PIA00137"
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "NASA Ka Maara Asteroid Pehli Baar Dikha! 🛰️ #Shorts",
+    "instagram_caption": "NASA ka maara asteroid dikh gaya! 🛰️\n\nEurope ke Hera ne Dimorphos ka stadium jitna bada gadda pakda hai. Aaspaas sainkdon patthar ghoom rahe hain.\n\nAsteroid aaye toh takkar ya bhaagna? 👇",
+    "description": "ESA ke Hera spacecraft ne us asteroid Dimorphos ki nayi photos bheji hain jise NASA ke DART mission ne 2022 mein takkar maari thi. Photos mein bada crater aur sainkdon boulders dikhte hain.",
+    "pinned_comment": "Asteroid aaye toh: TAKKAR 💥 ya BHAAGNA 🏃? 👇",
+    "hashtags": [
+      "#hera",
+      "#dart",
+      "#asteroid",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#planetarydefense",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

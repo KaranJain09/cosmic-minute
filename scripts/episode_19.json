@@ -1,0 +1,230 @@
+{
+  "episode_number": 19,
+  "series_title": "Cosmic Minute",
+  "title": "Moon Ke Footprints Kab Tak Rahenge?",
+  "slug": "moon-footprints-last",
+  "topic": "Evergreen: Apollo footprints on the Moon survive because there is no wind or rain; only micrometeorites slowly erode them (~1 mm per million years); estimates say millions of years or more.",
+  "angle": "evergreen",
+  "sources": [
+    "https://www.space.com/14740-footprints-moon.html",
+    "https://bigthink.com/starts-with-a-bang/astronaut-footprints-disappearing-moon/"
+  ],
+  "hook": "Moon ke footprints lakhon saal nahi mitenge!",
+  "title_card": "NISHAAN NAHI MITENGE",
+  "cliffhanger_question": "Moon par tum kya chhodoge: footprint ya naam?",
+  "summary": "Evergreen reel: Apollo bootprints on the Moon last because there is no wind or rain; tiny space dust wears them down by about a millimetre per million years, so they likely last millions of years.",
+  "voice": {},
+  "scenes": [
+    {
+      "id": 1,
+      "role": "hook",
+      "delivery": "excited",
+      "narration": "Moon ke footprints lakhon saal nahi mitenge!",
+      "speech": "Moon के footprints लाखों साल नहीं मिटेंगे!",
+      "on_screen_text": "*LAKHON* SAAL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Apollo astronaut bootprint lunar soil",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Unnees sau unhattar mein Neil Armstrong wahan chale the.",
+      "speech": "उन्नीस सौ उनहत्तर में Neil Armstrong वहाँ चले थे।",
+      "on_screen_text": "*1969* MEIN",
+      "visual": {
+        "backend": "nasa",
+        "query": "Neil Armstrong Apollo 11 Moon",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "as11-40-5902"
+      }
+    },
+    {
+      "id": 3,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Aur unke boot ke nishaan aaj bhi wahin hain.",
+      "speech": "और उनके boot के निशान आज भी वहीं हैं।",
+      "on_screen_text": "NISHAAN *AAJ BHI*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Apollo 11 bootprint",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "slide_up"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "role": "reveal",
+      "delivery": "curious",
+      "narration": "Kyunki Moon par hawa nahi hai.",
+      "speech": "क्योंकि Moon पर हवा नहीं है।",
+      "on_screen_text": "HAWA *NAHI*",
+      "visual": {
+        "backend": "nasa",
+        "query": "Moon surface horizon",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "pop"
+        },
+        "nasa_id": "as11-37-5458"
+      }
+    },
+    {
+      "id": 5,
+      "role": "build",
+      "delivery": "excited",
+      "narration": "Yahan toh Mumbai ki ek baarish mein sab bah jaata hai!",
+      "speech": "[laughs] यहाँ तो Mumbai की एक बारिश में सब बह जाता है!",
+      "on_screen_text": "EK BAARISH, *SAB GAYAB*",
+      "visual": {
+        "backend": "stock",
+        "query": "heavy monsoon rain street",
+        "fit": "cover",
+        "camera": "pan_left",
+        "style": {
+          "motion": "shake"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "role": "build",
+      "delivery": "curious",
+      "narration": "Wahan bas chhoti space dhool dheere dheere ghisai karti hai.",
+      "speech": "वहाँ बस छोटी space धूल धीरे धीरे घिसाई करती है।",
+      "on_screen_text": "SPACE *DHOOL*",
+      "visual": {
+        "backend": "nasa",
+        "query": "micrometeorite impact Moon dust",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "words"
+        },
+        "nasa_id": "as14-64-9127"
+      }
+    },
+    {
+      "id": 7,
+      "role": "twist",
+      "delivery": "shock",
+      "narration": "Das lakh saal mein sirf ek millimetre ghisai hoti hai!",
+      "speech": "दस लाख साल में सिर्फ़ एक millimetre घिसाई होती है!",
+      "on_screen_text": "*1 MM* / 10 LAKH SAAL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Moon regolith close up",
+        "fit": "cover",
+        "camera": "pan_up",
+        "style": {
+          "motion": "count"
+        },
+        "nasa_id": "as14-64-9127"
+      }
+    },
+    {
+      "id": 8,
+      "role": "build",
+      "delivery": "excited",
+      "narration": "Matlab yeh nishaan, tumhare phone ki battery se zyada tikenge!",
+      "speech": "[laughs] मतलब ये निशान, तुम्हारे phone की battery से ज़्यादा टिकेंगे!",
+      "on_screen_text": "BATTERY *KHATAM*",
+      "visual": {
+        "backend": "stock",
+        "query": "phone low battery",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "role": "reveal",
+      "delivery": "serious",
+      "narration": "Kuch scientists ke hisaab se, yeh karodon saal tak tikenge.",
+      "speech": "कुछ scientists के हिसाब से, ये करोड़ों साल तक टिकेंगे।",
+      "on_screen_text": "*KARODON* SAAL",
+      "visual": {
+        "backend": "nasa",
+        "query": "Apollo 17 Moon landing site",
+        "fit": "cover",
+        "camera": "zoom_out",
+        "style": {
+          "motion": "slide_up"
+        },
+        "nasa_id": "S72-55421"
+      }
+    },
+    {
+      "id": 10,
+      "role": "build",
+      "delivery": "normal",
+      "narration": "Bas koi machine unpe chadh jaaye, tab alag baat hai.",
+      "speech": "बस कोई machine उन पे चढ़ जाए, तब अलग बात है।",
+      "on_screen_text": "MACHINE *CHADHI*?",
+      "visual": {
+        "backend": "nasa",
+        "query": "lunar rover Apollo Moon",
+        "fit": "cover",
+        "camera": "pan_right",
+        "style": {
+          "motion": "shake"
+        },
+        "nasa_id": "as15-85-11437"
+      }
+    },
+    {
+      "id": 11,
+      "role": "cta",
+      "delivery": "question",
+      "narration": "Moon par tum kya chhodoge: footprint ya naam?",
+      "speech": "Moon पर तुम क्या छोड़ोगे: footprint या नाम?",
+      "on_screen_text": "FOOTPRINT YA *NAAM*?",
+      "visual": {
+        "backend": "stock",
+        "query": "footprints in sand",
+        "fit": "cover",
+        "camera": "zoom_in",
+        "style": {
+          "motion": "pop"
+        }
+      }
+    }
+  ],
+  "upload": {
+    "youtube_title": "Moon Ke Footprints Kab Tak Rahenge? 👣 #Shorts",
+    "instagram_caption": "Moon ke footprints lakhon saal nahi mitenge! 👣\n\nNa hawa, na baarish. Bas space dhool dheere dheere ghisai karti hai.\n\nMoon par tum kya chhodoge: footprint ya naam? 👇",
+    "description": "Apollo astronauts ke boot ke nishaan Moon par aaj bhi hain, kyunki wahan hawa aur baarish nahi hai. Scientists ke andaaze se ye lakhon-karodon saal tak reh sakte hain.",
+    "pinned_comment": "Moon par tum chhodoge: FOOTPRINT 👣 ya NAAM ✍️? 👇",
+    "hashtags": [
+      "#moon",
+      "#apollo",
+      "#neilarmstrong",
+      "#space",
+      "#nasa",
+      "#astronomy",
+      "#facts",
+      "#hindi",
+      "#spacefactshindi",
+      "#shorts"
+    ]
+  }
+}

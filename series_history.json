@@ -244,6 +244,32 @@
       "created_at": "2026-11-26T22:48:27+00:00",
       "duration_sec": 31.77,
       "voice_engine": "edge"
+    },
+    {
+      "episode_number": 18,
+      "title": "NASA Ka Maara Asteroid Pehli Baar Dikha",
+      "topic": "News: ESA's Hera released detailed images of Didymos and Dimorphos (~Nov 25-26, 2026): a stadium-sized crater/flattened side on Dimorphos from NASA's 2022 DART impact, hundreds of boulders orbiting, asteroid tumbling; Hera ~25-30 km away, approaching to ~13 km next month.",
+      "hook": "NASA ka maara asteroid dikh gaya!",
+      "cliffhanger_question": "Asteroid aaye toh tum kya chunoge: takkar ya bhaagna?",
+      "summary": "News reel: ESA's Hera probe sent new close-ups of the asteroid NASA hit in 2022. Dimorphos has a stadium-sized crater, hundreds of boulders orbit the pair, and it still tumbles. Hera moves in to about 13 km next month.",
+      "script_file": "scripts/episode_18.json",
+      "output_file": null,
+      "status": "scripted",
+      "angle": "news",
+      "created_at": "2026-11-27T22:30:00+00:00"
+    },
+    {
+      "episode_number": 19,
+      "title": "Moon Ke Footprints Kab Tak Rahenge?",
+      "topic": "Evergreen: Apollo footprints on the Moon survive because there is no wind or rain; only micrometeorites slowly erode them (~1 mm per million years); estimates say millions of years or more.",
+      "hook": "Moon ke footprints lakhon saal nahi mitenge!",
+      "cliffhanger_question": "Moon par tum kya chhodoge: footprint ya naam?",
+      "summary": "Evergreen reel: Apollo bootprints on the Moon last because there is no wind or rain; tiny space dust wears them down by about a millimetre per million years, so they likely last millions of years.",
+      "script_file": "scripts/episode_19.json",
+      "output_file": null,
+      "status": "scripted",
+      "angle": "evergreen",
+      "created_at": "2026-11-27T22:30:00+00:00"
     }
   ]
 }

@@ -18,8 +18,10 @@ KEY = os.environ.get("ELEVENLABS_API_KEY", "").strip()
 API = "https://api.elevenlabs.io"
 H = {"xi-api-key": KEY}
 OUT = Path("voice_samples/elevenlabs")
-LINE_ROMAN = "[excited] Bhai, NASA ne Mars par aise rocks dhoondhe hain! [whispers] Aur sach bataun? Yeh toh pagal kar dega."
-LINE_DEVA = "[excited] भाई, NASA ने Mars पर ऐसे rocks ढूंढे हैं! [whispers] और सच बताऊँ? ये तो पागल कर देगा।"
+LINE_ROMAN = ("[excited] Bhai, Sooraj itna bada hai ki usme terah lakh Earth ghus jaayein! "
+              "[whispers] Aur hum yahan parking ke liye lad rahe hain. [laughs]")
+LINE_DEVA = ("[excited] भाई, सूरज इतना बड़ा है कि उसमें तेरह लाख Earth घुस जाएं! "
+             "[whispers] और हम यहाँ parking के लिए लड़ रहे हैं। [laughs]")
 
 
 def get(path, **params):
@@ -72,10 +74,19 @@ def main() -> int:
     else:
         print("shared voices failed", st, str(shared)[:200])
 
-    picks = []
-    for g in ("female", "male"):
-        picks += [v for v in voices if v.get("gender") == g and v.get("use_case") in
-                  ("narrative_story", "social_media", "characters_animation", "conversational", "entertainment_tv")][:3]
+    forced = os.environ.get("MODEL", "").strip()
+    if forced:
+        expressive = forced
+        print("USING MODEL (forced)", expressive)
+    wanted = [x for x in os.environ.get("VOICE_IDS", "").split(",") if x.strip()]
+    if wanted:
+        by_id = {v["voice_id"]: v for v in voices}
+        picks = [by_id.get(w, {"voice_id": w, "name": w}) for w in wanted]
+    else:
+        picks = []
+        for g in ("female", "male"):
+            picks += [v for v in voices if v.get("gender") == g and v.get("use_case") in
+                      ("narrative_story", "social_media", "characters_animation", "conversational", "entertainment_tv")][:3]
     results = {}
     for i, v in enumerate(picks, 1):
         vid = v["voice_id"]

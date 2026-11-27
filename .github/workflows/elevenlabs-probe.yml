@@ -3,6 +3,13 @@ name: ElevenLabs voice check
 # Manual: checks the ElevenLabs key, models and Hindi voices, and makes short samples (about 700 credits).
 on:
   workflow_dispatch:
+    inputs:
+      model:
+        description: Model id (blank = auto)
+        default: "eleven_v3"
+      voice_ids:
+        description: Comma-separated voice ids (blank = top library picks)
+        default: ""
 
 permissions:
   contents: read
@@ -20,6 +27,8 @@ jobs:
       - name: Check ElevenLabs
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          MODEL: ${{ inputs.model }}
+          VOICE_IDS: ${{ inputs.voice_ids }}
         run: python tools/elevenlabs_probe.py
       - uses: actions/upload-artifact@v4
         with:

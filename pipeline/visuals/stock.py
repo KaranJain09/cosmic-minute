@@ -1,4 +1,4 @@
-"""Optional stock footage from Pexels (free key: PEXELS_API_KEY). Cached; falls back to kinetic on any failure."""
+"""Stock footage: Pexels (PEXELS_API_KEY) or Pixabay (PIXABAY_API_KEY), both free licences. Cached; falls back to kinetic."""
 from __future__ import annotations
 
 import hashlib
@@ -44,6 +44,51 @@ def _fetch_pexels(query: str, cache: Path) -> Path | None:
     return None
 
 
+def _download(url: str, dest: Path) -> Path:
+    with requests.get(url, stream=True, timeout=120) as dl:
+        dl.raise_for_status()
+        with open(dest, "wb") as f:
+            for chunk in dl.iter_content(1 << 20):
+                f.write(chunk)
+    return dest
+
+
+def _fetch_pixabay(query: str, cache: Path) -> Path | None:
+    """Pixabay videos (free key: PIXABAY_API_KEY, Pixabay Content License). Picks the tallest good file."""
+    key = env("PIXABAY_API_KEY")
+    if not key:
+        return None
+    cache.mkdir(parents=True, exist_ok=True)
+    hit = cache / f"pb_{hashlib.sha1(query.encode()).hexdigest()[:12]}.mp4"
+    if hit.exists():
+        return hit
+    r = requests.get("https://pixabay.com/api/videos/",
+                     params={"key": key, "q": query[:100], "per_page": 10, "safesearch": "true"}, timeout=30)
+    r.raise_for_status()
+    hits = r.json().get("hits", [])
+    # prefer portrait clips, then the most downloaded
+    hits.sort(key=lambda h: (-(h.get("videos", {}).get("large", {}).get("height", 0) >
+                               h.get("videos", {}).get("large", {}).get("width", 1)), -h.get("downloads", 0)))
+    for h in hits:
+        for size in ("large", "medium"):
+            v = (h.get("videos") or {}).get(size) or {}
+            if v.get("url") and min(v.get("width", 0), v.get("height", 0)) >= 720:
+                return _download(v["url"], hit)
+    return None
+
+
+def fetch_stock(query: str, cache: Path) -> Path | None:
+    for fetch in (_fetch_pexels, _fetch_pixabay):
+        try:
+            p = fetch(query, cache)
+        except Exception as e:
+            print(f"  ! {fetch.__name__[7:]} search failed ({str(e)[:120]})")
+            p = None
+        if p:
+            return p
+    return None
+
+
 class StockBackend(VisualBackend):
     name = "stock"
 
@@ -52,11 +97,7 @@ class StockBackend(VisualBackend):
         src = vis.get("clip")
         path = resolve(src) if src else None
         if not path or not path.exists():
-            try:
-                path = _fetch_pexels(vis.get("query") or vis.get("prompt", "space"), ctx.work.parent / "cache" / "stock")
-            except Exception as e:
-                print(f"  ! scene {ctx.scene['id']}: stock fetch failed ({e})")
-                path = None
+            path = fetch_stock(vis.get("query") or vis.get("prompt", "space"), ctx.work.parent / "cache" / "stock")
         if not path:
             print(f"  ! scene {ctx.scene['id']}: no stock clip, using kinetic")
             yield from KineticBackend().frames(ctx)

@@ -93,7 +93,7 @@ options. 8-12 hashtags: 3 topic-specific (e.g. #geminids), 3 trending-wide (#spa
 
 **Visuals:** mix sources so it never looks like a slideshow:
 - `"backend": "nasa"` with a concrete `query` for real space objects and missions (`"fit": "contain"` for whole planets).
-- `"backend": "stock"` (Pexels video, free licence) for comedy cutaways and desi comparisons: traffic jam, people
+- `"backend": "stock"` (Pixabay or Pexels video, free licence) for comedy cutaways and desi comparisons: traffic jam, people
   laughing, chai, crowded train, wedding dance, sweating man, office, cricket, explosion. Give a concrete English
   `query` ("mumbai traffic jam", "man sweating heat"). At least 3 stock scenes per reel, at least 3 NASA scenes.
 - Never use movie clips, Bollywood scenes, celebrity footage, memes made by others or any non-free footage.

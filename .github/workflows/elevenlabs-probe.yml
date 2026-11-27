@@ -10,6 +10,9 @@ on:
       voice_ids:
         description: Comma-separated voice ids (blank = top library picks)
         default: ""
+      script:
+        description: roman or deva
+        default: "roman"
 
 permissions:
   contents: read
@@ -29,6 +32,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           MODEL: ${{ inputs.model }}
           VOICE_IDS: ${{ inputs.voice_ids }}
+          SCRIPT: ${{ inputs.script }}
         run: python tools/elevenlabs_probe.py
       - uses: actions/upload-artifact@v4
         with:

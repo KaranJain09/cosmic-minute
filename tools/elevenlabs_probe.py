@@ -87,21 +87,28 @@ def main() -> int:
         for g in ("female", "male"):
             picks += [v for v in voices if v.get("gender") == g and v.get("use_case") in
                       ("narrative_story", "social_media", "characters_animation", "conversational", "entertainment_tv")][:3]
+    for term in ("funny", "comedy", "reel", "storyteller"):
+        st, more = get("/v1/shared-voices", language="hi", page_size=15, search=term)
+        if st == 200:
+            for v in more.get("voices", []):
+                print(f"MORE[{term}] {v['voice_id']} | {v.get('name')} | {v.get('gender')} | {v.get('use_case')}")
+    script = os.environ.get("SCRIPT", "roman").strip()
+    line = LINE_DEVA if script == "deva" else LINE_ROMAN
     results = {}
     for i, v in enumerate(picks, 1):
         vid = v["voice_id"]
-        audio, msg = tts(vid, LINE_ROMAN, expressive)
+        audio, msg = tts(vid, line, expressive)
         if audio is None and v.get("public_owner_id"):
             r = requests.post(f"{API}/v1/voices/add/{v['public_owner_id']}/{vid}", headers=H, timeout=60,
                               json={"new_name": v.get("name", "hindi")[:40]})
             print(f"  added {v.get('name')} to library: {r.status_code}")
-            audio, msg = tts(vid, LINE_ROMAN, expressive)
+            audio, msg = tts(vid, line, expressive)
         name = f"{i}_{v.get('gender')}_{(v.get('name') or 'voice').replace(' ', '_')[:24]}"
-        print(f"SAMPLE {name} roman: {msg}")
+        print(f"SAMPLE {name} {script}: {msg}")
         if audio:
-            (OUT / f"{name}_roman.mp3").write_bytes(audio)
+            (OUT / f"{name}_{script}.mp3").write_bytes(audio)
             results[name] = vid
-        if i == 1 and audio:
+        if i == 1 and audio and script != "deva":
             audio2, msg2 = tts(vid, LINE_DEVA, expressive)
             print(f"SAMPLE {name} devanagari: {msg2}")
             if audio2:

@@ -23,6 +23,8 @@ jobs:
     timeout-minutes: 90
     env:
       GH_TOKEN: ${{ github.token }}
+      ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
     steps:
       - uses: actions/checkout@v4
         with:

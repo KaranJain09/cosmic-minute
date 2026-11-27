@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import base64
+import time
 from pathlib import Path
 
 import requests
@@ -20,21 +21,22 @@ class ElevenLabsTTS(TTSBackend):
             raise RuntimeError("ELEVENLABS_API_KEY not set in .env (or switch tts.engine to 'edge')")
         c = self.cfg["elevenlabs"]
         vid = voice.get("voice_id") or c["voice_id"]
-        r = requests.post(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps",
-            headers={"xi-api-key": key, "Content-Type": "application/json"},
-            json={
-                "text": text,
-                "model_id": c.get("model_id", "eleven_multilingual_v2"),
-                "voice_settings": {
-                    "stability": c.get("stability", 0.45),
-                    "similarity_boost": c.get("similarity_boost", 0.8),
-                    "style": c.get("style", 0.3),
-                },
-            },
-            timeout=120,
-        )
-        if r.status_code != 200:
+        settings = {k: c[k] for k in ("stability", "similarity_boost", "style") if k in c}
+        body = {"text": text, "model_id": c.get("model_id", "eleven_multilingual_v2")}
+        if settings:
+            body["voice_settings"] = settings
+        r = None
+        for attempt in range(3):
+            r = requests.post(
+                f"https://api.elevenlabs.io/v1/text-to-speech/{vid}/with-timestamps",
+                headers={"xi-api-key": key, "Content-Type": "application/json"},
+                json=body,
+                timeout=120,
+            )
+            if r.status_code not in (429, 500, 502, 503, 504):
+                break
+            time.sleep(3 * (attempt + 1))
+        if r.status_code != 200:  # 401 bad key, 402/quota: out of credits -> render falls back to the free voice
             raise RuntimeError(f"ElevenLabs error {r.status_code}: {r.text[:400]}")
         data = r.json()
         out_path.write_bytes(base64.b64decode(data["audio_base64"]))

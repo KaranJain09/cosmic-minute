@@ -40,12 +40,11 @@ tts:
       shock:    { rate: "+2%",  pitch: "-3Hz" }
       serious:  { rate: "+4%",  pitch: "-5Hz" }
       question: { rate: "+10%", pitch: "+6Hz" }
-  elevenlabs:                     # needs ELEVENLABS_API_KEY in .env
-    voice_id: "pNInz6obpgDQGcFmaJgB"
-    model_id: "eleven_multilingual_v2"
-    stability: 0.45
-    similarity_boost: 0.8
-    style: 0.3
+  fallback: "edge"                # used automatically if the main engine fails (no key, out of credits)
+  elevenlabs:                     # key: GitHub secret / .env ELEVENLABS_API_KEY (Starter plan, 30k credits/month)
+    voice_id: "7b9mYhmnp0y2qSH1FnBL"   # Bunty - Funny Best Friend (Hindi). Placeholder until the user picks
+    model_id: "eleven_v3"         # expressive: understands [excited] [whispers] [laughs] tags in `speech`
+    stability: 0.5                # v3 accepts 0.0 (creative), 0.5 (natural), 1.0 (robust)
 
 visuals:
   default_backend: "nasa"         # nasa (real NASA photos, no key) | stock (Pexels video) | kenburns (own image) | kinetic

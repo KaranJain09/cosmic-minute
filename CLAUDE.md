@@ -221,6 +221,12 @@ The hook scene shows `title_card` as a tilted yellow card plus a white flash on 
 - **Niche: Space & science, standalone viral reels** (changed 2026-11-25 from a linked series, which lost viewers who
   had not seen the previous part). Each reel must hook a stranger in the first 2 s, be easy to follow, fast, and
   topical. Facts must be accurate; flag uncertain or speculative claims as such in narration ("scientists think…").
+- **Tone: comedy + real facts** (changed 2026-11-27): backchodi, roasts, desi comparisons, cheeky adult humour (never
+  explicit). Strong gaali only as `{{word}}` (voice says it, beep covers it, caption shows `#@$%!`), max 2 per reel,
+  never in the hook. Visuals mix NASA + Pexels stock (free licence) + animations; never movie/Bollywood/meme footage.
+- **Voice engine: ElevenLabs `eleven_v3`** (user bought Starter, 30k credits/month; key is the GitHub secret
+  `ELEVENLABS_API_KEY`). Emotion tags like `[laughs]` go in `speech`. If ElevenLabs fails, `tts.fallback` (edge Swara)
+  voices the reel automatically.
 - **Language: Hinglish** (changed 2026-11-25). Captions show Roman Hinglish (`narration`); the voice reads `speech`
   (same words, Hindi in Devanagari, English in Latin). Each scene's `delivery` (excited/curious/shock/serious/question/
   normal) changes speed and pitch, which is the free way to add emotion. ElevenLabs free tier was ruled out: about 10

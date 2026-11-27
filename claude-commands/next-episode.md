@@ -28,17 +28,32 @@ Rules:
 
 ## 3. Write the script (`scripts/episode_{N}.json`, schema in CLAUDE.md §3)
 
-**Language: Hinglish, like an Indian friend excitedly telling you something.** The voice is the Hindi voice
-`hi-IN-SwaraNeural`, so every scene has two versions of the same line, with the SAME number of words:
+**Personality: space facts told by your funniest dost: backchodi, roasts, desi comparisons, savage one-liners.**
+The facts are 100% real; the delivery is stand-up comedy. Think "Bhai, Venus toh toxic ex hai", "Mars pe plot lena
+hai? Pehle oxygen ki EMI dekh lo", "Neutron star ka ek chammach = poore Mumbai ka traffic ka wazan".
+- **Every reel has at least 3 laughs**: a roast of a planet/object/situation, a desi comparison (traffic, EMI, shaadi,
+  rishtedaar, Sharma ji ka beta, cricket, chai, exams, salary, Bollywood clichés described in words), and a savage
+  closing line. Jokes may be cheeky and double-meaning (adult humour like viral Indian meme pages), but never sexually
+  explicit, never about caste, religion, gender identity, disability, real private people, or sexual violence.
+- **Trend-jack**: search for this week's viral Indian Instagram/meme phrases and formats and fit one in when it is
+  natural (e.g. a viral dialogue pattern). Use only the phrase or format idea, never copied video or audio.
+- **Gaali**: mild slang is spoken openly (saala, bakchodi, pagal, bawaal, faad diya). Strong gaali goes inside
+  double braces in BOTH narration and speech, e.g. `{{bhenchod}}` / `{{भेनचोद}}`: the voice says it, a TV beep covers
+  it and captions show `#@$%!`. Max 2 bleeps per reel, never in the hook (scene 1 must be clean, so platforms push it).
+- Never repeat a joke, roast or catchphrase that appears in recent scripts. Do not reuse "Sabse crazy part?" or
+  "Haan ya naa?"; invent fresh lines every time.
+
+**Language: Hinglish.** Every scene has two versions of the same line, with the SAME number of words:
 - `narration`: Roman Hinglish, shown as captions. e.g. `"Bhai, socho... yeh kis cheez se bana hai?"`
-- `speech`: the same words for the voice, Hindi words in Devanagari, English words in Latin letters.
-  e.g. `"भाई, सोचो... ये किस चीज़ से बना है?"`. Numbers as Hindi words in speech (सात सौ), digits only in on_screen_text.
-- Tone: casual and fun. Use "Bhai, socho...", "Yeh dekho!", "Sabse crazy part?", "Aur suno...", "Pata hai kya?".
-  Keep science words people know in English (NASA, Mars, black hole, gravity, star, planet). Avoid shuddh Hindi
+- `speech`: the same words for the voice, Hindi words in Devanagari, English words in Latin letters, plus emotion
+  tags in square brackets for the ElevenLabs v3 voice: `[excited]`, `[laughs]`, `[whispers]`, `[sarcastic]`,
+  `[shocked]`, `[sighs]`, `[curious]`. Use 1-2 tags per scene where they help. Tags do not count as words and are
+  removed automatically for the free backup voice.
+  e.g. `"[laughs] भाई, सोचो... ये किस चीज़ से बना है?"`. Numbers as Hindi words in speech (सात सौ), digits only in on_screen_text.
+- Keep science words people know in English (NASA, Mars, black hole, gravity, star, planet). Avoid shuddh Hindi
   ("antariksh", "grah") and avoid long English sentences. Punctuation drives emotion: use "!", "?" and "..." on purpose.
-- `delivery` per scene sets the emotion: `excited` (hook, big numbers), `curious` (questions, setup), `shock`
-  (twist, scary or crazy fact), `serious` (warnings, sad facts), `question` (the ending), `normal`. Change it often;
-  never three scenes in a row with the same delivery.
+- `delivery` per scene (excited / curious / shock / serious / question / normal) still matters for the backup voice;
+  vary it and never use the same delivery three scenes in a row.
 - on_screen_text and title_card: short Roman Hinglish or English in capitals ("PAHAAD JITNA BHAARI", "SABSE CRAZY PART").
 - Upload text in Hinglish (Roman letters), hashtags in English plus 2 Hindi-audience tags (#hindi #spacefactshindi).
 
@@ -76,8 +91,13 @@ never a copy of the narration. Vary motion and camera every scene.
 starts with the hook line, then 1-2 short lines, then the question. `pinned_comment` = the question with 2 answer
 options. 8-12 hashtags: 3 topic-specific (e.g. #geminids), 3 trending-wide (#space #nasa #astronomy), rest niche.
 
-**Visuals:** every scene `"backend": "nasa"` with a concrete `query` naming the real object or mission, `"fit":
-"contain"` for whole planets/moons/stars. Fast camera moves (zoom_in on the hook).
+**Visuals:** mix sources so it never looks like a slideshow:
+- `"backend": "nasa"` with a concrete `query` for real space objects and missions (`"fit": "contain"` for whole planets).
+- `"backend": "stock"` (Pexels video, free licence) for comedy cutaways and desi comparisons: traffic jam, people
+  laughing, chai, crowded train, wedding dance, sweating man, office, cricket, explosion. Give a concrete English
+  `query` ("mumbai traffic jam", "man sweating heat"). At least 3 stock scenes per reel, at least 3 NASA scenes.
+- Never use movie clips, Bollywood scenes, celebrity footage, memes made by others or any non-free footage.
+Fast camera moves (zoom_in on the hook).
 
 ## 4. Validate
 `build_video.py --script scripts/episode_{N}.json --validate-only`. Fix every error and every warning you reasonably can,

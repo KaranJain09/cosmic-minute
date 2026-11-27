@@ -253,10 +253,12 @@
       "cliffhanger_question": "Asteroid aaye toh tum kya chunoge: takkar ya bhaagna?",
       "summary": "News reel: ESA's Hera probe sent new close-ups of the asteroid NASA hit in 2022. Dimorphos has a stadium-sized crater, hundreds of boulders orbit the pair, and it still tumbles. Hera moves in to about 13 km next month.",
       "script_file": "scripts/episode_18.json",
-      "output_file": null,
-      "status": "scripted",
+      "output_file": "upload videos/ep_018_hera-dimorphos-crater.mp4",
+      "status": "rendered",
       "angle": "news",
-      "created_at": "2026-11-27T22:30:00+00:00"
+      "created_at": "2026-11-27T22:30:00+00:00",
+      "duration_sec": 34.73,
+      "voice_engine": "edge"
     },
     {
       "episode_number": 19,
@@ -266,10 +268,12 @@
       "cliffhanger_question": "Moon par tum kya chhodoge: footprint ya naam?",
       "summary": "Evergreen reel: Apollo bootprints on the Moon last because there is no wind or rain; tiny space dust wears them down by about a millimetre per million years, so they likely last millions of years.",
       "script_file": "scripts/episode_19.json",
-      "output_file": null,
-      "status": "scripted",
+      "output_file": "upload videos/ep_019_moon-footprints-last.mp4",
+      "status": "rendered",
       "angle": "evergreen",
-      "created_at": "2026-11-27T22:30:00+00:00"
+      "created_at": "2026-11-27T22:30:00+00:00",
+      "duration_sec": 34.53,
+      "voice_engine": "edge"
     }
   ]
 }
